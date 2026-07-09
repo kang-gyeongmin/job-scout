@@ -12,7 +12,11 @@ PARAMS = {
     "country": "kr",
     "job_sort": "job.latest_order",
     "locations": "seoul.all",
-    "years": 0,        # 경력 하한
+    # years는 경력 하한이 아니라 단일 연차 매칭 필터:
+    # annual_from <= years <= annual_to 인 공고만 반환된다.
+    # years=3이면 신입 허용(annual_from=0) 공고와 1~3년 최소 경력 공고가 섞여
+    # 나와, 재생성된 fixture가 신입 외 experience 분기도 커버한다.
+    "years": 3,
     "limit": 20,
     "query": "데이터 엔지니어",
 }

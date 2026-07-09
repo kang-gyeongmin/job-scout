@@ -7,6 +7,10 @@ probe 결과(scripts/probe_wanted.py, tests/fixtures/wanted_list.json)로 확인
 채울 수 있다. 상세 응답(`/api/v4/jobs/{id}`)의 `job.detail.{intro,main_tasks,
 requirements}` 구조는 브리프 예상과 동일했다 (덤으로 `preferred_points`도 존재해
 description에 포함시켰다).
+
+`years` 파라미터는 경력 범위가 아니라 단일 연차 매칭 필터(annual_from <= years
+<= annual_to)이므로, "신입~3년"을 커버하기 위해 search()는 years=0과 years=3
+목록을 각각 조회해 id 기준으로 합친다 (자세한 근거는 search() 독스트링 참고).
 """
 import time
 
@@ -63,35 +67,48 @@ def fetch_detail(job_id: int, client: httpx.Client) -> str:
         parts = [detail.get(k, "") for k in
                  ("intro", "main_tasks", "requirements", "preferred_points")]
         return "\n\n".join(p for p in parts if p)
-    except httpx.HTTPError:
+    except (httpx.HTTPError, ValueError):
+        # ValueError: 응답이 200이지만 본문이 JSON이 아닌 경우 —
+        # 해당 공고 하나만 description=""로 처리하고 전체 수집은 계속한다.
         return ""
 
 
 def search(keyword: str, limit: int = 20) -> list[JobPosting]:
     """신입~3년 필터가 적용된 원티드 공고를 검색한다.
 
-    원티드 내부 API의 `years` 파라미터는 범위가 아니라 "이 연차의 지원자를
-    받는 공고인가"를 나타내는 단일 값 필터다 (annual_from <= years <= annual_to
-    인 공고만 반환). 목록 호출은 요청당 1회만 허용되므로(rate limit) years=0,
-    1, 2, 3을 각각 조회해 합칠 수 없다. years=0(완전 신입만, annual_from==0인
-    공고만 반환)을 쓰면 "1~3년차 최소 경력"을 요구하는 공고가 모두 제외되어
-    "신입~3년" 요구사항보다 좁아진다. 대신 years=3을 쓰면 annual_from이
-    0~3 사이인 공고를 폭넓게 포함하면서 상한(3년차까지 지원 가능한 공고)도
-    자연스럽게 만족해, 단일 호출로 "신입~3년" 요구를 가장 잘 근사한다.
+    원티드 내부 API의 `years` 파라미터는 범위가 아니라 "이 연차의 지원자가
+    지원 가능한 공고인가"를 뜻하는 단일 값 매칭 필터다 (annual_from <= years
+    <= annual_to 인 공고만 반환). 단일 값으로는 "신입~3년"을 재현할 수 없다:
+
+    - years=0 만 쓰면 annual_from == 0(완전 신입 허용) 공고만 남아
+      최소 1~3년 경력을 요구하는 주니어 공고가 빠지고,
+    - years=3 만 쓰면 annual_from == 3(신입 지원 불가) 공고까지 섞인다.
+
+    그래서 목록을 두 번(years=0, years=3) 호출해 id 기준으로 중복 제거하며
+    합친다 (years=0 결과가 앞). 합친 목록을 `limit` 건으로 자른 **뒤에만**
+    상세를 조회하므로 총 요청 수는 목록 2회 + 상세 최대 `limit`회이고,
+    모든 요청 사이에 0.5초 지연을 둔다.
     """
-    params = {
+    base_params = {
         "country": "kr",
         "job_sort": "job.latest_order",
         "locations": "seoul.all",
-        "years": 3,
         "limit": limit,
         "query": keyword,
     }
+    merged: dict[str, JobPosting] = {}
     with httpx.Client() as client:
-        resp = client.get(f"{BASE}/api/v4/jobs", params=params,
-                          headers=HEADERS, timeout=15)
-        resp.raise_for_status()
-        postings = parse_list(resp.json())
+        for i, years in enumerate((0, 3)):
+            if i > 0:
+                time.sleep(0.5)  # rate limit (목록 호출 사이)
+            resp = client.get(f"{BASE}/api/v4/jobs",
+                              params={**base_params, "years": years},
+                              headers=HEADERS, timeout=15)
+            resp.raise_for_status()
+            for p in parse_list(resp.json()):
+                if p.id not in merged:
+                    merged[p.id] = p
+        postings = list(merged.values())[:limit]  # 상세 조회 전에 limit로 절단
         for p in postings:
             time.sleep(0.5)  # rate limit
             p.description = fetch_detail(int(p.id.split(":")[1]), client)
