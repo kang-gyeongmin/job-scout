@@ -1,0 +1,324 @@
+{
+ "model_status": null,
+ "links": {
+  "prev": null,
+  "next": null
+ },
+ "is_callable_external_job": true,
+ "data_model": null,
+ "data": [
+  {
+   "status": "active",
+   "hidden": false,
+   "is_like": false,
+   "score": null,
+   "is_bookmark": false,
+   "company": {
+    "id": 11881,
+    "industry_name": "IT, 컨텐츠",
+    "application_response_stats": {
+     "avg_rate": 16.0,
+     "level": "very_low",
+     "delayed_count": 0,
+     "avg_day": null,
+     "remained_count": 0,
+     "type": "applied_reply_done"
+    },
+    "name": "래브라도랩스"
+   },
+   "annual_to": 5,
+   "title_img": {
+    "origin": "https://static.wanted.co.kr/images/company/11881/kadvlelrhtok1ur6__1080_790.jpg",
+    "thumb": "https://static.wanted.co.kr/images/company/11881/kadvlelrhtok1ur6__400_400.jpg"
+   },
+   "compare_country": true,
+   "due_time": "2026-07-31",
+   "like_count": 0,
+   "id": 363969,
+   "logo_img": {
+    "origin": "https://static.wanted.co.kr/images/wdes/0_4.0c7a7b3a.jpg",
+    "thumb": "https://static.wanted.co.kr/images/wdes/0_5.0c7a7b3a.jpg"
+   },
+   "address": {
+    "location_key": "seoul",
+    "district": "서초구",
+    "country": "한국",
+    "location": "서울",
+    "full_location": "서울특별시 서초구 반포대로 20, 3,4층",
+    "district_key": "seoul.seocho-gu"
+   },
+   "matching_score": null,
+   "position": "데이터 엔지니어(파이썬 개발자)",
+   "is_recommended": false,
+   "reward": {
+    "formatted_total": "100만원",
+    "formatted_recommender": "50만원",
+    "formatted_recommendee": "50만원"
+   },
+   "category_tags": [
+    {
+     "parent_id": 518,
+     "id": 655
+    }
+   ],
+   "annual_from": 0
+  },
+  {
+   "status": "active",
+   "hidden": false,
+   "is_like": false,
+   "score": null,
+   "is_bookmark": false,
+   "company": {
+    "id": 15353,
+    "industry_name": "IT, 컨텐츠",
+    "application_response_stats": {
+     "avg_rate": 76.42,
+     "level": "normal",
+     "delayed_count": 0,
+     "avg_day": null,
+     "remained_count": 0,
+     "type": "applied_reply_done"
+    },
+    "name": "페이타랩(패스오더)"
+   },
+   "annual_to": 10,
+   "title_img": {
+    "origin": "https://static.wanted.co.kr/images/company/15353/ya4dr2v1bfroezwy__1080_790.png",
+    "thumb": "https://static.wanted.co.kr/images/company/15353/ya4dr2v1bfroezwy__400_400.png"
+   },
+   "compare_country": true,
+   "due_time": null,
+   "like_count": 0,
+   "id": 326795,
+   "logo_img": {
+    "origin": "https://static.wanted.co.kr/images/wdes/0_4.2b945c4f.png",
+    "thumb": "https://static.wanted.co.kr/images/wdes/0_5.2b945c4f.png"
+   },
+   "address": {
+    "location_key": "seoul",
+    "district": "강남구",
+    "country": "한국",
+    "location": "서울",
+    "full_location": "서울특별시 강남구 영동대로 85길 34, 6층",
+    "district_key": "seoul.gangnam-gu"
+   },
+   "matching_score": null,
+   "position": "[병역특례] 데이터 엔지니어 (Growth Data Engineer), 부산",
+   "is_recommended": false,
+   "reward": {
+    "formatted_total": "100만원",
+    "formatted_recommender": "50만원",
+    "formatted_recommendee": "50만원"
+   },
+   "category_tags": [
+    {
+     "parent_id": 518,
+     "id": 655
+    },
+    {
+     "parent_id": 518,
+     "id": 1024
+    },
+    {
+     "parent_id": 518,
+     "id": 1025
+    }
+   ],
+   "annual_from": 0
+  },
+  {
+   "status": "active",
+   "hidden": false,
+   "is_like": false,
+   "score": null,
+   "is_bookmark": false,
+   "company": {
+    "id": 15353,
+    "industry_name": "IT, 컨텐츠",
+    "application_response_stats": {
+     "avg_rate": 76.42,
+     "level": "normal",
+     "delayed_count": 0,
+     "avg_day": null,
+     "remained_count": 0,
+     "type": "applied_reply_done"
+    },
+    "name": "페이타랩(패스오더)"
+   },
+   "annual_to": 5,
+   "title_img": {
+    "origin": "https://static.wanted.co.kr/images/company/15353/ya4dr2v1bfroezwy__1080_790.png",
+    "thumb": "https://static.wanted.co.kr/images/company/15353/ya4dr2v1bfroezwy__400_400.png"
+   },
+   "compare_country": true,
+   "due_time": null,
+   "like_count": 0,
+   "id": 326794,
+   "logo_img": {
+    "origin": "https://static.wanted.co.kr/images/wdes/0_4.2b945c4f.png",
+    "thumb": "https://static.wanted.co.kr/images/wdes/0_5.2b945c4f.png"
+   },
+   "address": {
+    "location_key": "seoul",
+    "district": "강남구",
+    "country": "한국",
+    "location": "서울",
+    "full_location": "서울특별시 강남구 영동대로 85길 34, 6층",
+    "district_key": "seoul.gangnam-gu"
+   },
+   "matching_score": null,
+   "position": "[병역특례] 데이터 엔지니어 (Growth Data Engineer), 서울",
+   "is_recommended": false,
+   "reward": {
+    "formatted_total": "100만원",
+    "formatted_recommender": "50만원",
+    "formatted_recommendee": "50만원"
+   },
+   "category_tags": [
+    {
+     "parent_id": 518,
+     "id": 655
+    },
+    {
+     "parent_id": 518,
+     "id": 1024
+    },
+    {
+     "parent_id": 518,
+     "id": 1025
+    }
+   ],
+   "annual_from": 0
+  },
+  {
+   "status": "active",
+   "hidden": false,
+   "is_like": false,
+   "score": null,
+   "is_bookmark": false,
+   "company": {
+    "id": 15353,
+    "industry_name": "IT, 컨텐츠",
+    "application_response_stats": {
+     "avg_rate": 76.42,
+     "level": "normal",
+     "delayed_count": 0,
+     "avg_day": null,
+     "remained_count": 0,
+     "type": "applied_reply_done"
+    },
+    "name": "페이타랩(패스오더)"
+   },
+   "annual_to": 10,
+   "title_img": {
+    "origin": "https://static.wanted.co.kr/images/company/15353/ya4dr2v1bfroezwy__1080_790.png",
+    "thumb": "https://static.wanted.co.kr/images/company/15353/ya4dr2v1bfroezwy__400_400.png"
+   },
+   "compare_country": true,
+   "due_time": null,
+   "like_count": 0,
+   "id": 321823,
+   "logo_img": {
+    "origin": "https://static.wanted.co.kr/images/wdes/0_4.2b945c4f.png",
+    "thumb": "https://static.wanted.co.kr/images/wdes/0_5.2b945c4f.png"
+   },
+   "address": {
+    "location_key": "seoul",
+    "district": "강남구",
+    "country": "한국",
+    "location": "서울",
+    "full_location": "서울특별시 강남구 영동대로 85길 34, 6층",
+    "district_key": "seoul.gangnam-gu"
+   },
+   "matching_score": null,
+   "position": "데이터 엔지니어 (Growth Data Engineer), 부산",
+   "is_recommended": false,
+   "reward": {
+    "formatted_total": "100만원",
+    "formatted_recommender": "50만원",
+    "formatted_recommendee": "50만원"
+   },
+   "category_tags": [
+    {
+     "parent_id": 518,
+     "id": 655
+    },
+    {
+     "parent_id": 518,
+     "id": 1024
+    },
+    {
+     "parent_id": 518,
+     "id": 1025
+    }
+   ],
+   "annual_from": 0
+  },
+  {
+   "status": "active",
+   "hidden": false,
+   "is_like": false,
+   "score": null,
+   "is_bookmark": false,
+   "company": {
+    "id": 15353,
+    "industry_name": "IT, 컨텐츠",
+    "application_response_stats": {
+     "avg_rate": 76.42,
+     "level": "normal",
+     "delayed_count": 0,
+     "avg_day": null,
+     "remained_count": 0,
+     "type": "applied_reply_done"
+    },
+    "name": "페이타랩(패스오더)"
+   },
+   "annual_to": 5,
+   "title_img": {
+    "origin": "https://static.wanted.co.kr/images/company/15353/ya4dr2v1bfroezwy__1080_790.png",
+    "thumb": "https://static.wanted.co.kr/images/company/15353/ya4dr2v1bfroezwy__400_400.png"
+   },
+   "compare_country": true,
+   "due_time": null,
+   "like_count": 0,
+   "id": 321821,
+   "logo_img": {
+    "origin": "https://static.wanted.co.kr/images/wdes/0_4.2b945c4f.png",
+    "thumb": "https://static.wanted.co.kr/images/wdes/0_5.2b945c4f.png"
+   },
+   "address": {
+    "location_key": "seoul",
+    "district": "강남구",
+    "country": "한국",
+    "location": "서울",
+    "full_location": "서울특별시 강남구 영동대로 85길 34, 6층",
+    "district_key": "seoul.gangnam-gu"
+   },
+   "matching_score": null,
+   "position": "[주니어] 데이터 엔지니어 (Growth Data Engineer), 서울",
+   "is_recommended": false,
+   "reward": {
+    "formatted_total": "100만원",
+    "formatted_recommender": "50만원",
+    "formatted_recommendee": "50만원"
+   },
+   "category_tags": [
+    {
+     "parent_id": 518,
+     "id": 655
+    },
+    {
+     "parent_id": 518,
+     "id": 1024
+    },
+    {
+     "parent_id": 518,
+     "id": 1025
+    }
+   ],
+   "annual_from": 0
+  }
+ ],
+ "is_score": true
+}
