@@ -14,7 +14,7 @@ def render_html(scored: list[ScoredJob], failures: list[str]) -> str:
     for job in sorted(scored, key=lambda j: j.score, reverse=True):
         rows.append(f"""
         <div style="border:1px solid #ddd;border-radius:8px;padding:12px;margin:10px 0">
-          <div style="font-size:13px;color:#888">{SITE_LABEL.get(job.site, job.site)}
+          <div style="font-size:13px;color:#888">{html.escape(SITE_LABEL.get(job.site, job.site))}
             &nbsp;|&nbsp; 적합도 <b>{job.score}/10</b></div>
           <div style="font-size:16px;margin:4px 0">
             <a href="{html.escape(job.url)}"><b>{html.escape(job.title)}</b></a>

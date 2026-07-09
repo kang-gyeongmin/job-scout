@@ -17,3 +17,11 @@ def test_render_html_sorted_by_score_desc_with_links():
 def test_render_html_shows_failures():
     html = render_html([make_job(7, "공고")], ["saramin 수집 실패"])
     assert "saramin 수집 실패" in html
+
+
+def test_render_html_escapes_unknown_site_label():
+    job = ScoredJob(id="x:1", site="<b>x</b>", title="공고", company="회사",
+                    url="https://x/1", score=5, reason="이유", summary="요약")
+    html = render_html([job], [])
+    assert "<b>x</b>" not in html
+    assert "&lt;b&gt;x&lt;/b&gt;" in html
