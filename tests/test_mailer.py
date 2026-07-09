@@ -1,5 +1,7 @@
+from unittest.mock import MagicMock, patch
+
 from src.agent import ScoredJob
-from src.mailer import render_html
+from src.mailer import render_html, send_email
 
 
 def make_job(score: int, title: str) -> ScoredJob:
@@ -25,3 +27,22 @@ def test_render_html_escapes_unknown_site_label():
     html = render_html([job], [])
     assert "<b>x</b>" not in html
     assert "&lt;b&gt;x&lt;/b&gt;" in html
+
+
+def test_send_email_sets_date_and_message_id_headers_and_logs_in(monkeypatch):
+    monkeypatch.setenv("SMTP_USER", "user@naver.com")
+    monkeypatch.setenv("SMTP_PASSWORD", "secret")
+    cfg = {"from": "user@naver.com", "to": "target@example.com",
+          "smtp_host": "smtp.naver.com", "smtp_port": 465}
+
+    mock_smtp = MagicMock()
+    mock_smtp.__enter__.return_value = mock_smtp
+    with patch("smtplib.SMTP_SSL", return_value=mock_smtp) as mock_ctor:
+        send_email("제목", "<html></html>", cfg)
+
+    mock_ctor.assert_called_once_with("smtp.naver.com", 465, timeout=30)
+    mock_smtp.login.assert_called_once_with("user@naver.com", "secret")
+    assert mock_smtp.send_message.called
+    sent_msg = mock_smtp.send_message.call_args[0][0]
+    assert sent_msg["Date"]
+    assert sent_msg["Message-ID"]

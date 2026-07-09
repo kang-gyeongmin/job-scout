@@ -49,10 +49,12 @@ def build_search_tool(collectors: dict[str, Callable], store: SeenStore,
                 failures.append(msg)
             return {"content": [{"type": "text",
                                  "text": f"{site} 수집 실패 — 이 사이트는 건너뛰어라."}]}
-        for p in postings:
-            if p.id not in fetched_ids:
-                fetched_ids.append(p.id)
-        payload = json.dumps([asdict(p) for p in postings], ensure_ascii=False)
+        # 이번 실행에서 다른 키워드/사이트 검색으로 이미 가져온 공고는 제외한다
+        # (중복 설명을 다시 LLM에 보내지 않기 위함).
+        new_postings = [p for p in postings if p.id not in fetched_ids]
+        for p in new_postings:
+            fetched_ids.append(p.id)
+        payload = json.dumps([asdict(p) for p in new_postings], ensure_ascii=False)
         return {"content": [{"type": "text", "text": payload}]}
     return handler
 
@@ -62,6 +64,28 @@ def extract_json(text: str) -> list[dict]:
     fence = re.search(r"```(?:json)?\s*(\[.*?\])\s*```", text, re.DOTALL)
     raw = fence.group(1) if fence else text[text.find("["):text.rfind("]") + 1]
     return json.loads(raw)
+
+
+def parse_scored(text: str) -> list[ScoredJob]:
+    """에이전트 응답 텍스트를 ScoredJob 목록으로 변환한다.
+
+    파싱에 실패하면 원문 앞부분을 담아 RuntimeError를 던진다 —
+    호출부에서 이 예외가 전파되면 seen 기록을 생략하고 다음 실행에서
+    재시도하도록 한다.
+    """
+    if not text.strip():
+        return []
+    try:
+        items = extract_json(text)
+        return [ScoredJob(**{
+            **{k: item[k] for k in
+               ("id", "site", "title", "company", "url", "reason", "summary")},
+            "score": int(item["score"]),
+        }) for item in items]
+    except (ValueError, KeyError, json.JSONDecodeError, TypeError) as e:
+        snippet = text[:500]
+        raise RuntimeError(
+            f"에이전트 응답 파싱 실패: {e!r} — 응답 앞부분: {snippet!r}") from e
 
 
 SYSTEM_PROMPT = """당신은 채용 공고 매칭 전문가다. search_jobs 툴로 공고를 검색해
@@ -114,8 +138,5 @@ async def run_agent(
         if isinstance(message, ResultMessage):
             result_text = message.result or ""
 
-    scored = [ScoredJob(**{k: item[k] for k in
-                           ("id", "site", "title", "company", "url",
-                            "score", "reason", "summary")})
-              for item in extract_json(result_text)] if result_text.strip() else []
+    scored = parse_scored(result_text)
     return scored, fetched_ids, failures

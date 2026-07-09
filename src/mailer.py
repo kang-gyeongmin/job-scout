@@ -1,4 +1,5 @@
 """HTML 이메일 렌더링 및 네이버 SMTP 발송."""
+import email.utils
 import html
 import os
 import smtplib
@@ -36,6 +37,8 @@ def send_email(subject: str, body_html: str, cfg: dict) -> None:
     msg["Subject"] = subject
     msg["From"] = cfg["from"]
     msg["To"] = cfg["to"]
+    msg["Date"] = email.utils.formatdate(localtime=True)
+    msg["Message-ID"] = email.utils.make_msgid()
     with smtplib.SMTP_SSL(cfg["smtp_host"], cfg["smtp_port"], timeout=30) as smtp:
         smtp.login(user, password)
         smtp.send_message(msg)
