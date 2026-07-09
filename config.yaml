@@ -1,0 +1,16 @@
+job_keywords:
+  - "데이터 엔지니어"
+  - "Data Engineer"
+experience: "신입~주니어(3년 이하)"
+locations: ["서울", "경기", "인천"]
+sites:
+  wanted: true
+  saramin: false      # API 키 발급 후 true (Task 8)
+  rocketpunch: false  # Task 9 완료 후 true
+email:
+  to: rkdrudals991@naver.com
+  from: rkdrudals991@naver.com
+  smtp_host: smtp.naver.com
+  smtp_port: 465
+min_score: 6   # 이 점수 이상만 이메일에 포함
+top_n: 10      # 이메일에 담을 최대 공고 수
