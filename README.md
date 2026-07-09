@@ -29,4 +29,4 @@ powershell -ExecutionPolicy Bypass -File scripts\register_task.ps1 -Time "09:00"
 |---|---|---|
 | 원티드 | ✅ | 내부 JSON API |
 | 사람인 | ⏳ | 오픈 API 키 발급 후 `config.yaml`에서 활성화 |
-| 로켓펀치 | ⏳ | HTML 크롤링 |
+| 로켓펀치 | ⏳ | 클라이언트 렌더링 + AWS WAF 챌린지로 보류 (Task 9, `.superpowers/sdd/task-9-report.md`) |
