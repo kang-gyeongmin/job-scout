@@ -3,6 +3,7 @@ import argparse
 import asyncio
 import datetime
 import logging
+import sys
 from pathlib import Path
 
 import yaml
@@ -30,6 +31,9 @@ def setup_logging() -> logging.Logger:
 
 
 def main() -> None:
+    if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true",
                         help="이메일을 보내지 않고 콘솔에 출력, seen 기록 안 함")
