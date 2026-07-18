@@ -1,0 +1,57 @@
+{
+  "jobs": {
+    "count": 2,
+    "start": 0,
+    "total": "2",
+    "job": [
+      {
+        "url": "http://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=50000001",
+        "active": 1,
+        "company": {
+          "detail": {
+            "href": "http://www.saramin.co.kr/zf_user/company-info/view?csn=1",
+            "name": "(주)데이터컴퍼니"
+          }
+        },
+        "position": {
+          "title": "데이터 엔지니어 신입/주니어 채용",
+          "industry": {"code": "301", "name": "솔루션·SI·ERP·CRM"},
+          "location": {"code": "101000", "name": "서울 &gt; 강남구"},
+          "job-type": {"code": "1", "name": "정규직"},
+          "job-mid-code": {"code": "2", "name": "IT개발·데이터"},
+          "experience-level": {"code": 1, "min": 0, "max": 0, "name": "신입"},
+          "required-education-level": {"code": "8", "name": "대졸(4년)"}
+        },
+        "keyword": "Python,Spark,Airflow",
+        "salary": {"code": "99", "name": "면접후 결정"},
+        "id": "50000001",
+        "posting-timestamp": "1752624000",
+        "posting-date": "2026-07-16T09:00:00+0900",
+        "expiration-timestamp": "1755302400"
+      },
+      {
+        "url": "http://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=50000002",
+        "active": 1,
+        "company": {
+          "detail": {
+            "name": "인천플랫폼(주)"
+          }
+        },
+        "position": {
+          "title": "주니어 데이터 플랫폼 엔지니어",
+          "industry": {"code": "302", "name": "웹포털·인터넷·쇼핑몰"},
+          "location": {"code": "108000", "name": "인천 &gt; 연수구"},
+          "job-type": {"code": "1", "name": "정규직"},
+          "experience-level": {"code": 2, "min": 1, "max": 3, "name": "경력 1~3년"},
+          "required-education-level": {"code": "0", "name": "학력무관"}
+        },
+        "keyword": "SQL,Kafka",
+        "salary": {"code": "11", "name": "4,000~4,400만원"},
+        "id": "50000002",
+        "posting-timestamp": "1752537600",
+        "posting-date": "2026-07-15T10:30:00+0900",
+        "expiration-timestamp": "1755302400"
+      }
+    ]
+  }
+}
