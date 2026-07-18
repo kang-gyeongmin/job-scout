@@ -11,13 +11,17 @@ import yaml
 from dotenv import load_dotenv
 
 from src.agent import run_agent
-from src.collectors import wanted
+from src.collectors import saramin, wanted, work24
+from src.dashboard import render_dashboard
+from src.history import HistoryStore
 from src.mailer import render_html, send_email
+from src.notion_sync import sync as notion_sync
 from src.store import SeenStore
 
 ROOT = Path(__file__).resolve().parent.parent
-COLLECTOR_FUNCS = {"wanted": wanted.search}
-# Task 8/9 완료 시 여기에 saramin/rocketpunch 추가
+COLLECTOR_FUNCS = {"wanted": wanted.search, "saramin": saramin.search,
+                   "work24": work24.search}
+# Task 9(로켓펀치) 완료 시 여기에 추가
 
 
 def setup_logging() -> logging.Logger:
@@ -43,13 +47,16 @@ def main() -> None:
     load_dotenv(ROOT / ".env")
     log = setup_logging()
     try:
-        if not args.dry_run and (not os.environ.get("SMTP_USER")
-                                  or not os.environ.get("SMTP_PASSWORD")):
+        config = yaml.safe_load((ROOT / "config.yaml").read_text(encoding="utf-8"))
+        email_enabled = config["email"].get("enabled", True)
+        if not args.dry_run and email_enabled and (
+                not os.environ.get("SMTP_USER")
+                or not os.environ.get("SMTP_PASSWORD")):
             log.error("SMTP 자격증명이 없어 실행을 중단합니다 "
-                      "(.env의 SMTP_USER/SMTP_PASSWORD 설정 필요)")
+                      "(.env의 SMTP_USER/SMTP_PASSWORD 설정, "
+                      "또는 config.yaml에서 email.enabled: false)")
             raise SystemExit(1)
 
-        config = yaml.safe_load((ROOT / "config.yaml").read_text(encoding="utf-8"))
         profile = (ROOT / "profile.md").read_text(encoding="utf-8")
         store = SeenStore(ROOT / "data" / "seen.json")
 
@@ -72,6 +79,27 @@ def main() -> None:
         log.info("신규 %d건, 채점 %d건, 발송 대상 %d건",
                  len(fetched_ids), len(scored), len(picked))
 
+        today = datetime.date.today().isoformat()
+        if not args.dry_run and scored:
+            # 대시보드·Notion은 min_score 미달 공고도 기록한다 (필터는 보는 쪽에서)
+            history = HistoryStore(ROOT / "data" / "history.json")
+            new_entries = history.add(scored, today)
+            dashboard_path = ROOT / "reports" / "dashboard.html"
+            dashboard_path.parent.mkdir(exist_ok=True)
+            dashboard_path.write_text(render_dashboard(history.entries),
+                                      encoding="utf-8")
+            log.info("대시보드 갱신: %s (누적 반영 신규 %d건)",
+                     dashboard_path, len(new_entries))
+
+            notion_token = os.environ.get("NOTION_TOKEN", "").strip()
+            notion_db = os.environ.get("NOTION_DB_ID", "").strip()
+            if notion_token and notion_db and new_entries:
+                try:  # Notion 실패가 이메일 발송을 막으면 안 된다
+                    created = notion_sync(new_entries, notion_token, notion_db)
+                    log.info("Notion 동기화 완료: %d건", created)
+                except Exception:
+                    log.exception("Notion 동기화 실패 — 계속 진행")
+
         if args.dry_run:
             for job in picked:
                 print(f"[{job.score}/10] {job.title} — {job.company}\n"
@@ -87,18 +115,20 @@ def main() -> None:
             log.info("발송할 공고 없음")
             return
 
-        today = datetime.date.today().isoformat()
-        subject = f"[job-scout] {today} 신규 공고 {len(picked)}건"
-        body = render_html(picked, failures)
-        try:
-            send_email(subject, body, config["email"])
-            log.info("이메일 발송 완료: %s", config["email"]["to"])
-        except Exception:
-            backup = ROOT / "reports" / f"{today}.html"
-            backup.parent.mkdir(exist_ok=True)
-            backup.write_text(body, encoding="utf-8")
-            log.exception("이메일 발송 실패 — 백업 저장: %s", backup)
-            raise
+        if email_enabled:
+            subject = f"[job-scout] {today} 신규 공고 {len(picked)}건"
+            body = render_html(picked, failures)
+            try:
+                send_email(subject, body, config["email"])
+                log.info("이메일 발송 완료: %s", config["email"]["to"])
+            except Exception:
+                backup = ROOT / "reports" / f"{today}.html"
+                backup.parent.mkdir(exist_ok=True)
+                backup.write_text(body, encoding="utf-8")
+                log.exception("이메일 발송 실패 — 백업 저장: %s", backup)
+                raise
+        else:
+            log.info("이메일 비활성화(email.enabled: false) — 발송 생략")
         store.mark(fetched_ids)
     except SystemExit:
         raise

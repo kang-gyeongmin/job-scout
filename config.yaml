@@ -1,13 +1,17 @@
 job_keywords:
   - "데이터 엔지니어"
   - "Data Engineer"
+  - "데이터 인턴"
+  - "개발 인턴"
 experience: "신입~주니어(3년 이하)"
 locations: ["서울", "경기", "인천"]
 sites:
   wanted: true
-  saramin: false      # API 키 발급 후 true (Task 8)
+  saramin: false      # .env에 SARAMIN_API_KEY 설정 후 true
   rocketpunch: false  # Task 9 완료 후 true
+  work24: true        # 청년일경험 포털 (IT 직무·수도권/지역무관 고정 필터)
 email:
+  enabled: false   # true로 바꾸면 메일 발송 재개 (SMTP_PASSWORD 필요)
   to: rkdrudals991@naver.com
   from: rkdrudals991@naver.com
   smtp_host: smtp.naver.com

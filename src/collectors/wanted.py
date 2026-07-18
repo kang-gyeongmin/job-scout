@@ -92,7 +92,8 @@ def search(keyword: str, limit: int = 20) -> list[JobPosting]:
     base_params = {
         "country": "kr",
         "job_sort": "job.latest_order",
-        "locations": "seoul.all",
+        # 리스트는 locations=...&locations=... 반복 파라미터로 인코딩된다
+        "locations": ["seoul.all", "gyeonggi.all", "incheon.all"],
         "limit": limit,
         "query": keyword,
     }
