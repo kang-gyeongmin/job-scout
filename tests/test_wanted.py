@@ -61,3 +61,22 @@ def test_experience_missing_fields_is_empty():
     del item["annual_from"], item["annual_to"]
     p = parse_list({"data": [item]})[0]
     assert p.experience == ""
+
+
+def test_max_experience_from_drops_over_experience():
+    # 최소 3년 요구(3~10년)는 max_experience_from=1이면 제외된다
+    data = {"data": [{**_item(3, 10), "id": 99}]}
+    assert parse_list(data, max_experience_from=1) == []
+
+
+def test_max_experience_from_keeps_entry_and_junior():
+    # 신입(annual_from=0)과 1년(annual_from=1)은 남는다
+    data = {"data": [{**_item(0, 5), "id": 1}, {**_item(1, 3), "id": 2}]}
+    kept = parse_list(data, max_experience_from=1)
+    assert [p.id for p in kept] == ["wanted:1", "wanted:2"]
+
+
+def test_no_filter_keeps_everything():
+    # max_experience_from 미지정 시 기존 동작(전부 유지)
+    data = {"data": [{**_item(3, 10), "id": 5}]}
+    assert len(parse_list(data)) == 1

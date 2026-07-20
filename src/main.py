@@ -2,6 +2,7 @@
 import argparse
 import asyncio
 import datetime
+import functools
 import logging
 import os
 import sys
@@ -60,6 +61,7 @@ def main() -> None:
         profile = (ROOT / "profile.md").read_text(encoding="utf-8")
         store = SeenStore(ROOT / "data" / "seen.json")
 
+        max_exp_from = config.get("max_experience_from", 1)
         collectors = {}
         for site, enabled in config["sites"].items():
             if not enabled:
@@ -67,7 +69,11 @@ def main() -> None:
             if site not in COLLECTOR_FUNCS:
                 log.warning("%s 사이트가 활성화되어 있지만 수집기가 없습니다 — 건너뜀", site)
                 continue
-            collectors[site] = COLLECTOR_FUNCS[site]
+            func = COLLECTOR_FUNCS[site]
+            # 원티드는 최소 요구 경력 상한을 config에서 받아 하드 필터링한다
+            if site == "wanted":
+                func = functools.partial(func, max_experience_from=max_exp_from)
+            collectors[site] = func
 
         log.info("에이전트 실행 시작 (사이트: %s)", list(collectors))
         scored, fetched_ids, failures, postings_by_id = asyncio.run(

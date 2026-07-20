@@ -40,9 +40,20 @@ def _format_experience(item: dict) -> str:
     return f"{from_label}~{to_label}"
 
 
-def parse_list(data: dict) -> list[JobPosting]:
+def parse_list(data: dict,
+               max_experience_from: int | None = None) -> list[JobPosting]:
+    """목록 응답을 JobPosting으로 변환한다.
+
+    max_experience_from를 주면 최소 요구 경력(annual_from)이 그 값을 초과하는
+    공고를 버린다 — 예: 1이면 "2년~5년"·"3년~10년"처럼 신입/주니어가 지원할
+    수 없는 공고를 제외한다. annual_from이 없으면(경력 정보 없음) 남긴다.
+    """
     postings = []
     for item in data.get("data", []):
+        annual_from = item.get("annual_from")
+        if (max_experience_from is not None and annual_from is not None
+                and annual_from > max_experience_from):
+            continue
         job_id = item["id"]
         postings.append(JobPosting(
             id=f"wanted:{job_id}",
@@ -74,8 +85,14 @@ def fetch_detail(job_id: int, client: httpx.Client) -> str:
         return ""
 
 
-def search(keyword: str, limit: int = 20) -> list[JobPosting]:
+def search(keyword: str, limit: int = 20,
+           max_experience_from: int = 1) -> list[JobPosting]:
     """신입~3년 필터가 적용된 원티드 공고를 검색한다.
+
+    max_experience_from는 "지원 가능한 최소 요구 경력" 상한이다 (기본 1년).
+    years=3 목록에는 annual_from이 1~3인 공고가 섞여 들어오는데, 그중 최소
+    경력이 이 값을 넘는 공고(예: annual_from==3인 "3년~10년")는 신입/주니어가
+    지원할 수 없으므로 parse_list 단계에서 버린다.
 
     원티드 내부 API의 `years` 파라미터는 범위가 아니라 "이 연차의 지원자가
     지원 가능한 공고인가"를 뜻하는 단일 값 매칭 필터다 (annual_from <= years
@@ -107,7 +124,7 @@ def search(keyword: str, limit: int = 20) -> list[JobPosting]:
                               params={**base_params, "years": years},
                               headers=HEADERS, timeout=15)
             resp.raise_for_status()
-            for p in parse_list(resp.json()):
+            for p in parse_list(resp.json(), max_experience_from):
                 if p.id not in merged:
                     merged[p.id] = p
         postings = list(merged.values())[:limit]  # 상세 조회 전에 limit로 절단
