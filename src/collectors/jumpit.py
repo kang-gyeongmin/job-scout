@@ -9,8 +9,8 @@ probe(scripts/probe_jumpit.py, 2026-07-20): https://api.jumpit.co.kr/api/positio
   않고(어떤 개발 키워드를 넣어도 개발 공고 전체 611건이 반환됨), 점핏은 직무
   카테고리(jobCategory, 콤마 구분 ID)로 필터링한다. work24 수집기와 같은 방식
   으로 keyword 대신 데이터 직무 카테고리로 전량 수집한다.
-    · 19=빅데이터 엔지니어, 8=인공지능/머신러닝 (기본값)
-    · 1=서버/백엔드, 9=devops/시스템, 7=DBA (필요 시 넓히기)
+    · 19=빅데이터 엔지니어 (기본값)
+    · 8=인공지능/머신러닝, 1=서버/백엔드, 9=devops/시스템, 7=DBA (필요 시 넓히기)
 - 관련도순이라 고경력 공고도 섞여 오므로, 최소 경력(minCareer)이
   max_experience_from을 넘는 공고는 버린다.
 - 지역은 목록에 "서울 구로구"처럼 들어온다. 수도권(서울·경기·인천)만 남기되,
@@ -35,7 +35,7 @@ HEADERS = {
 PAGE_SIZE = 16          # 관찰된 페이지당 건수
 MAX_PAGES = 5           # 안전 상한
 LOC_PREFIXES = ("서울", "경기", "인천")  # 수도권 필터
-DEFAULT_CATEGORIES = "19,8"  # 빅데이터 엔지니어 + 인공지능/머신러닝
+DEFAULT_CATEGORIES = "19"  # 빅데이터 엔지니어 (8=AI/ML 등은 config에서 확장)
 
 
 def _format_experience(item: dict) -> str:

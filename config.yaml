@@ -8,8 +8,8 @@ experience: "신입~주니어(3년 이하)"
 # 공고(예: 최소 3년 요구하는 "3~10년")를 제외한다. 0=신입만, 1=1년 이하 허용.
 max_experience_from: 1
 # 점핏 직무 카테고리 ID(콤마 구분). keyword가 안 먹혀서 카테고리로 필터한다.
-# 19=빅데이터, 8=AI/ML / 넓히려면 1=백엔드, 9=devops, 7=DBA 추가.
-jumpit_categories: "19,8"
+# 19=빅데이터 / 넓히려면 8=AI/ML, 1=백엔드, 9=devops, 7=DBA 추가.
+jumpit_categories: "19"
 locations: ["서울", "경기", "인천"]
 sites:
   wanted: true
