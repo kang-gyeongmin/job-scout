@@ -1,0 +1,484 @@
+{
+ "message": "포지션 리스트가 조회되었습니다.",
+ "status": 200,
+ "code": "P004",
+ "result": {
+  "totalCount": 610,
+  "page": 1,
+  "keyword": "데이터 엔지니어",
+  "keywordType": "etc,etc",
+  "positions": [
+   {
+    "id": 54508661,
+    "jobCategory": "HW/임베디드",
+    "logo": "https://cdn.jumpit.co.kr/lg/images/hmlee_4/20211608081656036_400_393.webp",
+    "imagePath": "https://cdn.jumpit.co.kr/lg/images/tnrecruit_3095/20210508080532399_1080_810.webp",
+    "title": "NVR Web viewer개발(13↑)",
+    "companyName": "트루엔",
+    "techStacks": [
+     "Linux",
+     "FW"
+    ],
+    "viewCount": 0,
+    "newcomer": false,
+    "minCareer": 13,
+    "maxCareer": 16,
+    "locations": [
+     "서울 구로구"
+    ],
+    "alwaysOpen": false,
+    "closedAt": "2026-08-18T23:59:59",
+    "serialNumber": "1088169506",
+    "encodedSerialNumber": "MTA4ODE2OTUwNg==",
+    "celebration": 50,
+    "scraped": false,
+    "applied": false
+   },
+   {
+    "id": 54508679,
+    "jobCategory": "HW/임베디드",
+    "logo": "https://cdn.jumpit.co.kr/lg/images/hmlee_4/20211608081656036_400_393.webp",
+    "imagePath": "https://cdn.jumpit.co.kr/lg/images/tnrecruit_3095/20210508080532399_1080_810.webp",
+    "title": "NVR Web viewer개발(5↑)",
+    "companyName": "트루엔",
+    "techStacks": [
+     "Linux",
+     "FW"
+    ],
+    "viewCount": 0,
+    "newcomer": false,
+    "minCareer": 5,
+    "maxCareer": 8,
+    "locations": [
+     "서울 구로구"
+    ],
+    "alwaysOpen": false,
+    "closedAt": "2026-08-18T23:59:59",
+    "serialNumber": "1088169506",
+    "encodedSerialNumber": "MTA4ODE2OTUwNg==",
+    "celebration": 50,
+    "scraped": false,
+    "applied": false
+   },
+   {
+    "id": 54508686,
+    "jobCategory": "서버/백엔드 개발자",
+    "logo": "https://cdn.jumpit.co.kr/lg/images/hmlee_4/20211608081656036_400_393.webp",
+    "imagePath": "https://cdn.jumpit.co.kr/lg/images/tnrecruit_3095/20210508080532399_1080_810.webp",
+    "title": "서버 개발자 (경력 5년↑)",
+    "companyName": "트루엔",
+    "techStacks": [
+     "REST API",
+     "Golang"
+    ],
+    "viewCount": 1,
+    "newcomer": false,
+    "minCareer": 5,
+    "maxCareer": 7,
+    "locations": [
+     "서울 구로구"
+    ],
+    "alwaysOpen": false,
+    "closedAt": "2026-08-18T23:59:59",
+    "serialNumber": "1088169506",
+    "encodedSerialNumber": "MTA4ODE2OTUwNg==",
+    "celebration": 50,
+    "scraped": false,
+    "applied": false
+   },
+   {
+    "id": 54508699,
+    "jobCategory": "HW/임베디드",
+    "logo": "https://cdn.jumpit.co.kr/lg/images/hmlee_4/20211608081656036_400_393.webp",
+    "imagePath": "https://cdn.jumpit.co.kr/lg/images/tnrecruit_3095/20210508080532399_1080_810.webp",
+    "title": "NVR Web viewer개발(9↑)",
+    "companyName": "트루엔",
+    "techStacks": [
+     "Linux",
+     "FW"
+    ],
+    "viewCount": 0,
+    "newcomer": false,
+    "minCareer": 9,
+    "maxCareer": 12,
+    "locations": [
+     "서울 구로구"
+    ],
+    "alwaysOpen": false,
+    "closedAt": "2026-08-18T23:59:59",
+    "serialNumber": "1088169506",
+    "encodedSerialNumber": "MTA4ODE2OTUwNg==",
+    "celebration": 50,
+    "scraped": false,
+    "applied": false
+   },
+   {
+    "id": 54508712,
+    "jobCategory": "서버/백엔드 개발자",
+    "logo": "https://cdn.jumpit.co.kr/lg/images/hmlee_4/20211608081656036_400_393.webp",
+    "imagePath": "https://cdn.jumpit.co.kr/lg/images/tnrecruit_3095/20210508080532399_1080_810.webp",
+    "title": "서버 개발자 (경력 11년↑)",
+    "companyName": "트루엔",
+    "techStacks": [
+     "REST API",
+     "Golang"
+    ],
+    "viewCount": 0,
+    "newcomer": false,
+    "minCareer": 11,
+    "maxCareer": 15,
+    "locations": [
+     "서울 구로구"
+    ],
+    "alwaysOpen": false,
+    "closedAt": "2026-08-18T23:59:59",
+    "serialNumber": "1088169506",
+    "encodedSerialNumber": "MTA4ODE2OTUwNg==",
+    "celebration": 50,
+    "scraped": false,
+    "applied": false
+   },
+   {
+    "id": 54508724,
+    "jobCategory": "서버/백엔드 개발자",
+    "logo": "https://cdn.jumpit.co.kr/lg/images/hmlee_4/20211608081656036_400_393.webp",
+    "imagePath": "https://cdn.jumpit.co.kr/lg/images/tnrecruit_3095/20210508080532399_1080_810.webp",
+    "title": "서버 개발자 (경력 8년↑)",
+    "companyName": "트루엔",
+    "techStacks": [
+     "REST API",
+     "Golang"
+    ],
+    "viewCount": 0,
+    "newcomer": false,
+    "minCareer": 8,
+    "maxCareer": 10,
+    "locations": [
+     "서울 구로구"
+    ],
+    "alwaysOpen": false,
+    "closedAt": "2026-08-18T23:59:59",
+    "serialNumber": "1088169506",
+    "encodedSerialNumber": "MTA4ODE2OTUwNg==",
+    "celebration": 50,
+    "scraped": false,
+    "applied": false
+   },
+   {
+    "id": 54507766,
+    "jobCategory": "기술지원,SW/솔루션",
+    "logo": "https://cdn.jumpit.co.kr/lg/images/129504/20234008164018643_1184_1184.webp",
+    "imagePath": "https://cdn.jumpit.co.kr/lg/images/jnyoon_106/20254316154343574_567_378.webp",
+    "title": "[충전기사업부문] 펌웨어 개발자 경력 채용",
+    "companyName": "원익피앤이",
+    "techStacks": [
+     "C",
+     "C++",
+     "Linux",
+     "TCP/IP",
+     "HW",
+     "Embedded",
+     "RTOS",
+     "MCU",
+     "ARM",
+     "Embedded Linux"
+    ],
+    "viewCount": 0,
+    "newcomer": false,
+    "minCareer": 3,
+    "maxCareer": 5,
+    "locations": [
+     "경기 화성시"
+    ],
+    "alwaysOpen": false,
+    "closedAt": "2026-08-18T23:59:59",
+    "serialNumber": "1248167704",
+    "encodedSerialNumber": "MTI0ODE2NzcwNA==",
+    "celebration": 50,
+    "scraped": false,
+    "applied": false
+   },
+   {
+    "id": 54507782,
+    "jobCategory": "기술지원,SW/솔루션",
+    "logo": "https://cdn.jumpit.co.kr/lg/images/129504/20234008164018643_1184_1184.webp",
+    "imagePath": "https://cdn.jumpit.co.kr/lg/images/jnyoon_106/20254316154343574_567_378.webp",
+    "title": "[충전기사업부문] SW개발 경력(5년 이상) 채용",
+    "companyName": "원익피앤이",
+    "techStacks": [
+     "C",
+     "C#",
+     "C++",
+     "Git",
+     "Linux",
+     "GUI"
+    ],
+    "viewCount": 1,
+    "newcomer": false,
+    "minCareer": 5,
+    "maxCareer": 20,
+    "locations": [
+     "경기 화성시"
+    ],
+    "alwaysOpen": false,
+    "closedAt": "2026-08-18T23:59:59",
+    "serialNumber": "1248167704",
+    "encodedSerialNumber": "MTI0ODE2NzcwNA==",
+    "celebration": 50,
+    "scraped": false,
+    "applied": false
+   },
+   {
+    "id": 54507406,
+    "jobCategory": "SW/솔루션",
+    "logo": "https://cdn.jumpit.co.kr/lg/images/275157/20240612180639534/profile-image.webp",
+    "imagePath": "https://cdn.jumpit.co.kr/lg/images/275157/20250206150235152/profile-image.webp",
+    "title": "HW/FW Engineer (과장~차장급)",
+    "companyName": "리브스메드",
+    "techStacks": [
+     "C",
+     "C++",
+     "Orcad",
+     "HW",
+     "FW",
+     "Embedded",
+     "MCU",
+     "Embedded Linux"
+    ],
+    "viewCount": 0,
+    "newcomer": false,
+    "minCareer": 7,
+    "maxCareer": 12,
+    "locations": [
+     "경기 성남시"
+    ],
+    "alwaysOpen": false,
+    "closedAt": "2026-08-18T23:59:59",
+    "serialNumber": "1198643312",
+    "encodedSerialNumber": "MTE5ODY0MzMxMg==",
+    "celebration": 50,
+    "scraped": false,
+    "applied": false
+   },
+   {
+    "id": 54507418,
+    "jobCategory": "SW/솔루션",
+    "logo": "https://cdn.jumpit.co.kr/lg/images/275157/20240612180639534/profile-image.webp",
+    "imagePath": "https://cdn.jumpit.co.kr/lg/images/275157/20250206150235152/profile-image.webp",
+    "title": "SW Project Manager (SW PM)",
+    "companyName": "리브스메드",
+    "techStacks": [
+     "Confluence",
+     "Git",
+     "Jira",
+     "HW",
+     "SW",
+     "Confluent"
+    ],
+    "viewCount": 0,
+    "newcomer": false,
+    "minCareer": 3,
+    "maxCareer": 10,
+    "locations": [
+     "경기 성남시"
+    ],
+    "alwaysOpen": false,
+    "closedAt": "2026-08-18T23:59:59",
+    "serialNumber": "1198643312",
+    "encodedSerialNumber": "MTE5ODY0MzMxMg==",
+    "celebration": 50,
+    "scraped": false,
+    "applied": false
+   },
+   {
+    "id": 54507141,
+    "jobCategory": "웹 풀스택 개발자,SW/솔루션,서버/백엔드 개발자,프론트엔드 개발자",
+    "logo": "https://cdn.jumpit.co.kr/lg/images/hmlee_4/20210415090453124_334_333.webp",
+    "imagePath": "https://cdn.jumpit.co.kr/lg/images/jnyoon_106/20255615095625799_567_378.webp",
+    "title": ".NET 풀스택 개발자 채용",
+    "companyName": "필라넷",
+    "techStacks": [
+     ".NET",
+     "ASP.NET",
+     "C#",
+     "Docker",
+     "JavaScript",
+     "MSSQL",
+     "TypeScript",
+     "Vue.js",
+     "SQL",
+     "AZURE"
+    ],
+    "viewCount": 1,
+    "newcomer": false,
+    "minCareer": 7,
+    "maxCareer": 15,
+    "locations": [
+     "서울 강남구"
+    ],
+    "alwaysOpen": false,
+    "closedAt": "2026-08-18T23:59:59",
+    "serialNumber": "2118714314",
+    "encodedSerialNumber": "MjExODcxNDMxNA==",
+    "celebration": 50,
+    "scraped": false,
+    "applied": false
+   },
+   {
+    "id": 54506921,
+    "jobCategory": "기술지원,웹 풀스택 개발자,DBA,SW/솔루션,devops/시스템 엔지니어,서버/백엔드 개발자",
+    "logo": "https://cdn.jumpit.co.kr/lg/images/hmlee_4/20210415090453124_334_333.webp",
+    "imagePath": "https://cdn.jumpit.co.kr/lg/images/jnyoon_106/20255615095625799_567_378.webp",
+    "title": "풀스택 개발자 채용",
+    "companyName": "필라넷",
+    "techStacks": [
+     "Java",
+     "MariaDB",
+     "MSSQL",
+     "MySQL",
+     "Spring",
+     "Webpack",
+     "Mybatis",
+     "SQL"
+    ],
+    "viewCount": 2,
+    "newcomer": false,
+    "minCareer": 3,
+    "maxCareer": 20,
+    "locations": [
+     "서울 강남구"
+    ],
+    "alwaysOpen": false,
+    "closedAt": "2026-08-18T23:59:59",
+    "serialNumber": "2118714314",
+    "encodedSerialNumber": "MjExODcxNDMxNA==",
+    "celebration": 50,
+    "scraped": false,
+    "applied": false
+   },
+   {
+    "id": 54507028,
+    "jobCategory": "devops/시스템 엔지니어",
+    "logo": "https://cdn.jumpit.co.kr/lg/images/hmlee_4/20213427173447703_790_778.webp",
+    "imagePath": "https://cdn.jumpit.co.kr/lg/images/hmlee_4/20213527173515465_958_674.webp",
+    "title": "Jira & Jenkins 관리업무 담당자",
+    "companyName": "한국비즈넷",
+    "techStacks": [
+     "Git",
+     "GitHub",
+     "Jenkins",
+     "Jira",
+     "Spring Boot"
+    ],
+    "viewCount": 1,
+    "newcomer": false,
+    "minCareer": 3,
+    "maxCareer": 7,
+    "locations": [
+     "서울 구로구"
+    ],
+    "alwaysOpen": false,
+    "closedAt": "2026-08-18T23:59:59",
+    "serialNumber": "1058156720",
+    "encodedSerialNumber": "MTA1ODE1NjcyMA==",
+    "celebration": 50,
+    "scraped": false,
+    "applied": false
+   },
+   {
+    "id": 54505705,
+    "jobCategory": "서버/백엔드 개발자",
+    "logo": "https://cdn.jumpit.co.kr/lg/images/jnyoon_106/20241122161125609_189_189.webp",
+    "imagePath": "https://cdn.jumpit.co.kr/lg/images/company/3738702339/20241219191223525/sm2o6n_jalm-1ph8z08_workenv-bg.webp",
+    "title": "백엔드 개발자 채용",
+    "companyName": "윤회",
+    "techStacks": [
+     "Docker",
+     "Git",
+     "Node.js",
+     "PostgreSQL",
+     "Python",
+     "TypeScript",
+     "AWS",
+     "GCP"
+    ],
+    "viewCount": 6,
+    "newcomer": false,
+    "minCareer": 3,
+    "maxCareer": 15,
+    "locations": [
+     "서울 성동구"
+    ],
+    "alwaysOpen": false,
+    "closedAt": "2026-08-18T23:59:59",
+    "serialNumber": "3738702339",
+    "encodedSerialNumber": "MzczODcwMjMzOQ==",
+    "celebration": 50,
+    "scraped": false,
+    "applied": false
+   },
+   {
+    "id": 54505965,
+    "jobCategory": "서버/백엔드 개발자",
+    "logo": "https://cdn.jumpit.co.kr/images/jnyoon_106/20263324103307603_189_189.png",
+    "imagePath": "https://cdn.jumpit.co.kr/images/company/7318802342/20262015112002396/rsmak7_876a-1p4jap5_workenv-bg.png",
+    "title": "IoT & Mobile machine Solutions",
+    "companyName": "레디로버스트머신",
+    "techStacks": [
+     "Android OS",
+     "C",
+     "C++",
+     "Git",
+     "Java",
+     "MSSQL",
+     "MySQL",
+     "Python",
+     "AWS",
+     "MCU"
+    ],
+    "viewCount": 0,
+    "newcomer": false,
+    "minCareer": 1,
+    "maxCareer": 5,
+    "locations": [
+     "경남 김해시"
+    ],
+    "alwaysOpen": false,
+    "closedAt": "2026-08-18T23:59:59",
+    "serialNumber": "7318802342",
+    "encodedSerialNumber": "NzMxODgwMjM0Mg==",
+    "celebration": 50,
+    "scraped": false,
+    "applied": false
+   },
+   {
+    "id": 54504270,
+    "jobCategory": "SW/솔루션",
+    "logo": "https://cdn.jumpit.co.kr/images/company/1218135936/20252010122042327/pnjofz_a4mm-0_logo.jpg",
+    "imagePath": "https://cdn.jumpit.co.kr/images/company/1218135936/20252010122042637/qrfrbo_q1ko-1phvtuj_workenv-bg.jpg",
+    "title": "로봇 제어",
+    "companyName": "라온테크",
+    "techStacks": [
+     "Qt",
+     "SW",
+     "Visual C++"
+    ],
+    "viewCount": 1,
+    "newcomer": false,
+    "minCareer": 5,
+    "maxCareer": 9,
+    "locations": [
+     "경기 수원시 권선구"
+    ],
+    "alwaysOpen": false,
+    "closedAt": "2026-08-18T23:59:59",
+    "serialNumber": "1218135936",
+    "encodedSerialNumber": "MTIxODEzNTkzNg==",
+    "celebration": 50,
+    "scraped": false,
+    "applied": false
+   }
+  ],
+  "emptyPosition": false
+ }
+}

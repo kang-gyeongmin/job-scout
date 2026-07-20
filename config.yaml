@@ -11,8 +11,9 @@ locations: ["서울", "경기", "인천"]
 sites:
   wanted: true
   saramin: false      # .env에 SARAMIN_API_KEY 설정 후 true
-  rocketpunch: false  # Task 9 완료 후 true
+  rocketpunch: false  # 클라이언트 렌더링 + AWS WAF로 보류
   work24: true        # 청년일경험 포털 (IT 직무·수도권/지역무관 고정 필터)
+  jumpit: true        # 점핏 (개발자 특화, minCareer 기준 경력 필터)
 email:
   enabled: false   # true로 바꾸면 메일 발송 재개 (SMTP_PASSWORD 필요)
   to: rkdrudals991@naver.com

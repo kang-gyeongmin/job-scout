@@ -12,7 +12,7 @@ import yaml
 from dotenv import load_dotenv
 
 from src.agent import run_agent
-from src.collectors import saramin, wanted, work24
+from src.collectors import jumpit, saramin, wanted, work24
 from src.dashboard import render_dashboard
 from src.history import HistoryStore
 from src.mailer import render_html, send_email
@@ -21,7 +21,7 @@ from src.store import SeenStore
 
 ROOT = Path(__file__).resolve().parent.parent
 COLLECTOR_FUNCS = {"wanted": wanted.search, "saramin": saramin.search,
-                   "work24": work24.search}
+                   "work24": work24.search, "jumpit": jumpit.search}
 # Task 9(로켓펀치) 완료 시 여기에 추가
 
 
@@ -70,8 +70,8 @@ def main() -> None:
                 log.warning("%s 사이트가 활성화되어 있지만 수집기가 없습니다 — 건너뜀", site)
                 continue
             func = COLLECTOR_FUNCS[site]
-            # 원티드는 최소 요구 경력 상한을 config에서 받아 하드 필터링한다
-            if site == "wanted":
+            # 원티드·점핏은 최소 요구 경력 상한을 config에서 받아 하드 필터링한다
+            if site in ("wanted", "jumpit"):
                 func = functools.partial(func, max_experience_from=max_exp_from)
             collectors[site] = func
 
