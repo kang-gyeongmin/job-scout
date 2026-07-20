@@ -62,6 +62,7 @@ def main() -> None:
         store = SeenStore(ROOT / "data" / "seen.json")
 
         max_exp_from = config.get("max_experience_from", 1)
+        jumpit_categories = config.get("jumpit_categories", jumpit.DEFAULT_CATEGORIES)
         collectors = {}
         for site, enabled in config["sites"].items():
             if not enabled:
@@ -73,6 +74,8 @@ def main() -> None:
             # 원티드·점핏은 최소 요구 경력 상한을 config에서 받아 하드 필터링한다
             if site in ("wanted", "jumpit"):
                 func = functools.partial(func, max_experience_from=max_exp_from)
+            if site == "jumpit":
+                func = functools.partial(func, categories=jumpit_categories)
             collectors[site] = func
 
         log.info("에이전트 실행 시작 (사이트: %s)", list(collectors))
