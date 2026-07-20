@@ -90,7 +90,8 @@ def main() -> None:
 
         today = datetime.date.today().isoformat()
         if not args.dry_run and scored:
-            # 대시보드·Notion은 min_score 미달 공고도 기록한다 (필터는 보는 쪽에서)
+            # 대시보드는 모든 공고를 기록하고(필터는 보는 쪽에서), Notion은
+            # notion_min_score 이상만 올린다.
             history = HistoryStore(ROOT / "data" / "history.json")
             new_entries = history.add(scored, today, postings_by_id)
             dashboard_path = ROOT / "reports" / "dashboard.html"
@@ -102,10 +103,13 @@ def main() -> None:
 
             notion_token = os.environ.get("NOTION_TOKEN", "").strip()
             notion_db = os.environ.get("NOTION_DB_ID", "").strip()
-            if notion_token and notion_db and new_entries:
+            notion_min = config.get("notion_min_score", 5)
+            notion_entries = [e for e in new_entries if e["score"] >= notion_min]
+            if notion_token and notion_db and notion_entries:
                 try:  # Notion 실패가 이메일 발송을 막으면 안 된다
-                    created = notion_sync(new_entries, notion_token, notion_db)
-                    log.info("Notion 동기화 완료: %d건", created)
+                    created = notion_sync(notion_entries, notion_token, notion_db)
+                    log.info("Notion 동기화 완료: %d건 (%d점 이상, 신규 %d건 중)",
+                             created, notion_min, len(new_entries))
                 except Exception:
                     log.exception("Notion 동기화 실패 — 계속 진행")
 

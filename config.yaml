@@ -23,5 +23,6 @@ email:
   from: rkdrudals991@naver.com
   smtp_host: smtp.naver.com
   smtp_port: 465
-min_score: 6   # 이 점수 이상만 이메일에 포함
-top_n: 10      # 이메일에 담을 최대 공고 수
+min_score: 6         # 이 점수 이상만 이메일에 포함
+notion_min_score: 5  # 이 점수 이상만 Notion에 저장 (대시보드는 전부 기록)
+top_n: 10            # 이메일에 담을 최대 공고 수
