@@ -56,6 +56,7 @@ def parse_list(html: str) -> list[JobPosting]:
                     .replace("​", "").strip())
         type_label = card.select_one(".label i.label-txt")
         recruit_period = fields.get("모집기간", "")
+        period_parts = [p.strip() for p in recruit_period.split("~")]
         postings.append(JobPosting(
             id=f"work24:{m.group(2)}",
             site="work24",
@@ -67,7 +68,8 @@ def parse_list(html: str) -> list[JobPosting]:
             description=f"모집기간: {recruit_period} / "
                         f"모집인원: {fields.get('모집인원', '')} / "
                         f"운영기관: {fields.get('운영기관', '')}",
-            posted_at=_fix_year(recruit_period.split("~")[0]),
+            posted_at=_fix_year(period_parts[0]),
+            deadline=_fix_year(period_parts[1]) if len(period_parts) > 1 else "",
         ))
     return postings
 

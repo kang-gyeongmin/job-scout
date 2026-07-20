@@ -70,7 +70,7 @@ def main() -> None:
             collectors[site] = COLLECTOR_FUNCS[site]
 
         log.info("에이전트 실행 시작 (사이트: %s)", list(collectors))
-        scored, fetched_ids, failures = asyncio.run(
+        scored, fetched_ids, failures, postings_by_id = asyncio.run(
             run_agent(config, profile, collectors, store))
         for f in failures:
             log.warning(f)
@@ -83,7 +83,7 @@ def main() -> None:
         if not args.dry_run and scored:
             # 대시보드·Notion은 min_score 미달 공고도 기록한다 (필터는 보는 쪽에서)
             history = HistoryStore(ROOT / "data" / "history.json")
-            new_entries = history.add(scored, today)
+            new_entries = history.add(scored, today, postings_by_id)
             dashboard_path = ROOT / "reports" / "dashboard.html"
             dashboard_path.parent.mkdir(exist_ok=True)
             dashboard_path.write_text(render_dashboard(history.entries),

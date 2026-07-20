@@ -25,6 +25,8 @@ PROPERTIES = {
         {"name": s, "color": c} for s, c in
         zip(STATUS_OPTIONS, ("blue", "yellow", "green", "gray"))]}},
     "수집일": {"date": {}},
+    "시작일": {"date": {}},
+    "마감일": {"date": {}},
     "이유": {"rich_text": {}},
     "요약": {"rich_text": {}},
     "링크": {"url": {}},
@@ -47,21 +49,24 @@ def _text(value: str) -> dict:
 
 def build_page(entry: dict, db_id: str) -> dict:
     """history 항목 하나를 Notion 페이지 생성 요청 본문으로 변환한다."""
-    return {
-        "parent": {"database_id": db_id},
-        "properties": {
-            "제목": {"title": [{"text": {"content": entry["title"][:2000]}}]},
-            "회사": _text(entry["company"]),
-            "사이트": {"select": {"name": SITE_LABEL.get(entry["site"], entry["site"])}},
-            "점수": {"number": entry["score"]},
-            "상태": {"select": {"name": "신규"}},
-            "수집일": {"date": {"start": entry["date"]}},
-            "이유": _text(entry["reason"]),
-            "요약": _text(entry["summary"]),
-            "링크": {"url": entry["url"]},
-            "공고 ID": _text(entry["id"]),
-        },
+    properties = {
+        "제목": {"title": [{"text": {"content": entry["title"][:2000]}}]},
+        "회사": _text(entry["company"]),
+        "사이트": {"select": {"name": SITE_LABEL.get(entry["site"], entry["site"])}},
+        "점수": {"number": entry["score"]},
+        "상태": {"select": {"name": "신규"}},
+        "수집일": {"date": {"start": entry["date"]}},
+        "이유": _text(entry["reason"]),
+        "요약": _text(entry["summary"]),
+        "링크": {"url": entry["url"]},
+        "공고 ID": _text(entry["id"]),
     }
+    # 날짜가 없는 공고(상시채용 등)는 속성 자체를 생략한다 (빈 date는 API 오류)
+    if entry.get("start_date"):
+        properties["시작일"] = {"date": {"start": entry["start_date"]}}
+    if entry.get("deadline"):
+        properties["마감일"] = {"date": {"start": entry["deadline"]}}
+    return {"parent": {"database_id": db_id}, "properties": properties}
 
 
 def sync(entries: list[dict], token: str, db_id: str) -> int:

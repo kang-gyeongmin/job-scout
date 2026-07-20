@@ -11,4 +11,5 @@ class JobPosting:
     experience: str  # 사이트 원문 그대로
     url: str
     description: str  # 상세 본문, 없으면 ""
-    posted_at: str    # ISO 날짜 문자열, 없으면 ""
+    posted_at: str    # 모집 시작일(ISO 날짜), 없으면 ""
+    deadline: str = ""  # 모집 마감일(ISO 날짜), 없으면 ""

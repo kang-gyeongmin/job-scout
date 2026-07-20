@@ -34,6 +34,11 @@ def test_posted_at_converts_two_digit_year():
     assert p.posted_at == "2026-07-10"
 
 
+def test_deadline_from_recruit_period_end():
+    p = parse_list(FIXTURE)[0]
+    assert p.deadline == "2026-07-18"
+
+
 def test_fix_year_invalid_returns_empty():
     assert _fix_year("") == ""
     assert _fix_year("2026-07-10") == ""  # 이미 4자리 연도면 목록 형식이 아님

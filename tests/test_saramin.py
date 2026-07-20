@@ -34,6 +34,11 @@ def test_parse_list_builds_description_from_keywords():
     assert "정규직" in p.description
 
 
+def test_deadline_from_expiration_timestamp():
+    # 1755302400 = 2025-08-16 00:00 UTC (KST 09:00) — 픽스처의 마감 타임스탬프
+    assert parse_list(FIXTURE)[0].deadline == "2025-08-16"
+
+
 def test_parse_list_empty_response():
     assert parse_list({"jobs": {"job": []}}) == []
     assert parse_list({}) == []

@@ -46,6 +46,16 @@ def test_experience_nonzero_from_uses_year_prefix():
     assert p.experience == "1년~3년"
 
 
+def test_deadline_from_due_time():
+    item = {**_item(0, 2), "due_time": "2026-07-30 23:59:59"}
+    assert parse_list({"data": [item]})[0].deadline == "2026-07-30"
+
+
+def test_deadline_null_due_time_is_empty():
+    item = {**_item(0, 2), "due_time": None}  # 상시채용
+    assert parse_list({"data": [item]})[0].deadline == ""
+
+
 def test_experience_missing_fields_is_empty():
     item = _item(0, 2)
     del item["annual_from"], item["annual_to"]

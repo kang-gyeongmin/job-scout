@@ -113,7 +113,8 @@ function render() {
     const st = statusOf(j);
     return `<div class="card ${st === "제외" ? "done" : ""}">
       <div class="meta"><span>${esc(SITE_LABEL[j.site] || j.site)}</span>
-        <span class="score">${j.score}/10</span><span>${esc(j.date)}</span></div>
+        <span class="score">${j.score}/10</span><span>${esc(j.date)}</span>
+        ${j.deadline ? `<span>마감 ${esc(j.deadline)}</span>` : ""}</div>
       <div class="title"><a href="${esc(j.url)}" target="_blank" rel="noopener">
         ${esc(j.title)}</a> — ${esc(j.company)}</div>
       <div class="reason">${esc(j.reason)}</div>

@@ -53,7 +53,8 @@ def parse_list(data: dict) -> list[JobPosting]:
             experience=_format_experience(item),
             url=f"{BASE}/wd/{job_id}",
             description="",
-            posted_at="",  # 목록 응답에는 등록일이 없음(due_time은 마감일)
+            posted_at="",  # 목록 응답에는 등록일이 없음
+            deadline=(item.get("due_time") or "")[:10],  # 상시채용이면 null
         ))
     return postings
 
