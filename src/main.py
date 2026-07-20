@@ -14,6 +14,7 @@ from dotenv import load_dotenv
 from src.agent import run_agent
 from src.collectors import jumpit, saramin, wanted, work24
 from src.dashboard import render_dashboard
+from src.enrich import enrich
 from src.history import HistoryStore
 from src.mailer import render_html, send_email
 from src.notion_sync import sync as notion_sync
@@ -36,6 +37,23 @@ def setup_logging() -> logging.Logger:
     return logging.getLogger("job_scout")
 
 
+def run_enrich(profile: str, config: dict, log: logging.Logger) -> None:
+    """노션의 수동 입력 링크(점수 빈 row)를 채점해 채운다. 실패해도 본 흐름은 계속."""
+    token = os.environ.get("NOTION_TOKEN", "").strip()
+    db = os.environ.get("NOTION_DB_ID", "").strip()
+    if not (token and db):
+        log.info("NOTION 자격증명 없음 — 수동 링크 보강 생략")
+        return
+    try:
+        ok, fail = asyncio.run(enrich(token, db, profile, config))
+        if ok or fail:
+            log.info("수동 링크 보강: 성공 %d건, 실패 %d건", ok, fail)
+        else:
+            log.info("보강할 수동 링크 없음")
+    except Exception:
+        log.exception("수동 링크 보강 실패 — 계속 진행")
+
+
 def main() -> None:
     if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -43,6 +61,8 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true",
                         help="이메일을 보내지 않고 콘솔에 출력, seen 기록 안 함")
+    parser.add_argument("--enrich-only", action="store_true",
+                        help="수집·발송 없이 노션의 수동 입력 링크만 채점·보강")
     args = parser.parse_args()
 
     load_dotenv(ROOT / ".env")
@@ -50,7 +70,7 @@ def main() -> None:
     try:
         config = yaml.safe_load((ROOT / "config.yaml").read_text(encoding="utf-8"))
         email_enabled = config["email"].get("enabled", True)
-        if not args.dry_run and email_enabled and (
+        if not args.dry_run and not args.enrich_only and email_enabled and (
                 not os.environ.get("SMTP_USER")
                 or not os.environ.get("SMTP_PASSWORD")):
             log.error("SMTP 자격증명이 없어 실행을 중단합니다 "
@@ -59,6 +79,13 @@ def main() -> None:
             raise SystemExit(1)
 
         profile = (ROOT / "profile.md").read_text(encoding="utf-8")
+
+        # 수동 입력 링크 보강: 수집·발송과 독립적으로, 매 실제 실행마다 수행한다.
+        if not args.dry_run:
+            run_enrich(profile, config, log)
+        if args.enrich_only:
+            return
+
         store = SeenStore(ROOT / "data" / "seen.json")
 
         max_exp_from = config.get("max_experience_from", 1)
