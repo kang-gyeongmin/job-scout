@@ -8,8 +8,19 @@ ENTRY = {
 }
 
 
+def test_build_page_includes_company_size_when_present():
+    props = build_page({**ENTRY, "company_size": "중견기업"}, "db")["properties"]
+    assert props["기업규모"]["select"]["name"] == "중견기업"
+
+
+def test_build_page_omits_company_size_when_absent():
+    props = build_page(ENTRY, "db")["properties"]  # company_size 없음
+    assert "기업규모" not in props
+
+
 def test_build_page_maps_all_schema_properties():
-    page = build_page(ENTRY, "db-123")
+    # 기업규모까지 모두 있는 완전한 엔트리
+    page = build_page({**ENTRY, "company_size": "대기업"}, "db-123")
     assert page["parent"] == {"database_id": "db-123"}
     assert set(page["properties"]) == set(PROPERTIES)
 

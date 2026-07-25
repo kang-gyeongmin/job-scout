@@ -17,6 +17,7 @@ sites:
   rocketpunch: false  # 클라이언트 렌더링 + AWS WAF로 보류
   work24: true        # 청년일경험 포털 (IT 직무·수도권/지역무관 고정 필터)
   jumpit: true        # 점핏 (개발자 특화, minCareer 기준 경력 필터)
+  catch: true         # 캐치 (중견·대기업·공기업 신입 공채, 기업규모 제공)
 email:
   enabled: false   # true로 바꾸면 메일 발송 재개 (SMTP_PASSWORD 필요)
   to: rkdrudals991@naver.com

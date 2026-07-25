@@ -19,6 +19,7 @@ STATUS_OPTIONS = ["신규", "관심", "지원함", "제외"]
 PROPERTIES = {
     "제목": {"title": {}},
     "회사": {"rich_text": {}},
+    "기업규모": {"select": {}},
     "사이트": {"select": {}},
     "점수": {"number": {}},
     "상태": {"select": {"options": [
@@ -61,6 +62,9 @@ def build_page(entry: dict, db_id: str) -> dict:
         "링크": {"url": entry["url"]},
         "공고 ID": _text(entry["id"]),
     }
+    # 기업규모는 제공 사이트(캐치 등)만 채워지므로 있을 때만 넣는다
+    if entry.get("company_size"):
+        properties["기업규모"] = {"select": {"name": entry["company_size"]}}
     # 날짜가 없는 공고(상시채용 등)는 속성 자체를 생략한다 (빈 date는 API 오류)
     if entry.get("start_date"):
         properties["시작일"] = {"date": {"start": entry["start_date"]}}

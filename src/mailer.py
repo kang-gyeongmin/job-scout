@@ -8,7 +8,7 @@ from email.mime.text import MIMEText
 from src.agent import ScoredJob
 
 SITE_LABEL = {"wanted": "원티드", "saramin": "사람인", "rocketpunch": "로켓펀치",
-              "work24": "청년일경험", "jumpit": "점핏"}
+              "work24": "청년일경험", "jumpit": "점핏", "catch": "캐치"}
 
 
 def render_html(scored: list[ScoredJob], failures: list[str]) -> str:

@@ -49,7 +49,8 @@ class HistoryStore:
             posting = (postings_by_id or {}).get(job.id)
             added.append({**asdict(job), "date": date,
                           "start_date": posting.posted_at if posting else "",
-                          "deadline": posting.deadline if posting else ""})
+                          "deadline": posting.deadline if posting else "",
+                          "company_size": posting.company_size if posting else ""})
         if added:
             self.entries.extend(added)
             self.path.parent.mkdir(parents=True, exist_ok=True)
