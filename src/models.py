@@ -13,3 +13,4 @@ class JobPosting:
     description: str  # 상세 본문, 없으면 ""
     posted_at: str    # 모집 시작일(ISO 날짜), 없으면 ""
     deadline: str = ""  # 모집 마감일(ISO 날짜), 없으면 ""
+    company_size: str = ""  # 기업규모(대기업/중견기업/공기업 등), 제공 사이트만 채움
