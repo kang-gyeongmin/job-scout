@@ -13,6 +13,7 @@ from dotenv import load_dotenv
 
 from src.agent import run_agent
 from src.collectors import catch, jumpit, saramin, wanted, work24
+from src.cleanup import cleanup_expired
 from src.dashboard import render_dashboard
 from src.enrich import enrich
 from src.history import HistoryStore
@@ -55,6 +56,22 @@ def run_enrich(profile: str, config: dict, log: logging.Logger) -> None:
         log.exception("수동 링크 보강 실패 — 계속 진행")
 
 
+def run_cleanup(log: logging.Logger) -> None:
+    """마감일이 지난 노션 공고를 아카이브한다. 실패해도 본 흐름은 계속."""
+    token = os.environ.get("NOTION_TOKEN", "").strip()
+    db = os.environ.get("NOTION_DB_ID", "").strip()
+    if not (token and db):
+        return
+    try:
+        n = cleanup_expired(token, db)
+        if n:
+            log.info("마감 지난 공고 정리: %d건 아카이브", n)
+        else:
+            log.info("마감 지난 공고 없음")
+    except Exception:
+        log.exception("마감 공고 정리 실패 — 계속 진행")
+
+
 def main() -> None:
     if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -81,9 +98,10 @@ def main() -> None:
 
         profile = (ROOT / "profile.md").read_text(encoding="utf-8")
 
-        # 수동 입력 링크 보강: 수집·발송과 독립적으로, 매 실제 실행마다 수행한다.
+        # 수동 링크 보강 + 마감 지난 공고 정리: 수집·발송과 독립적으로 매 실행 수행.
         if not args.dry_run:
             run_enrich(profile, config, log)
+            run_cleanup(log)
         if args.enrich_only:
             return
 
@@ -132,7 +150,9 @@ def main() -> None:
             notion_token = os.environ.get("NOTION_TOKEN", "").strip()
             notion_db = os.environ.get("NOTION_DB_ID", "").strip()
             notion_min = config.get("notion_min_score", 5)
-            notion_entries = [e for e in new_entries if e["score"] >= notion_min]
+            # 이미 마감된(마감일 < 오늘) 공고는 애초에 올리지 않는다.
+            notion_entries = [e for e in new_entries if e["score"] >= notion_min
+                              and not (e.get("deadline") and e["deadline"] < today)]
             if notion_token and notion_db and notion_entries:
                 try:  # Notion 실패가 이메일 발송을 막으면 안 된다
                     created = notion_sync(notion_entries, notion_token, notion_db)
