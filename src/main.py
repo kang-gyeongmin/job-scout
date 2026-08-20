@@ -12,7 +12,8 @@ import yaml
 from dotenv import load_dotenv
 
 from src.agent import run_agent
-from src.collectors import catch, jobkorea, jumpit, saramin, wanted, work24
+from src.collectors import (
+    catch, jobkorea, jumpit, saramin, wanted, work24, zighang)
 from src.cleanup import cleanup_expired
 from src.dashboard import render_dashboard
 from src.enrich import enrich
@@ -24,7 +25,8 @@ from src.store import SeenStore
 ROOT = Path(__file__).resolve().parent.parent
 COLLECTOR_FUNCS = {"wanted": wanted.search, "saramin": saramin.search,
                    "work24": work24.search, "jumpit": jumpit.search,
-                   "catch": catch.search, "jobkorea": jobkorea.search}
+                   "catch": catch.search, "jobkorea": jobkorea.search,
+                   "zighang": zighang.search}
 # Task 9(로켓펀치) 완료 시 여기에 추가
 
 
@@ -117,8 +119,8 @@ def main() -> None:
                 log.warning("%s 사이트가 활성화되어 있지만 수집기가 없습니다 — 건너뜀", site)
                 continue
             func = COLLECTOR_FUNCS[site]
-            # 원티드·점핏은 최소 요구 경력 상한을 config에서 받아 하드 필터링한다
-            if site in ("wanted", "jumpit"):
+            # 원티드·점핏·직행은 최소 요구 경력 상한을 config에서 받아 필터링한다
+            if site in ("wanted", "jumpit", "zighang"):
                 func = functools.partial(func, max_experience_from=max_exp_from)
             if site == "jumpit":
                 func = functools.partial(func, categories=jumpit_categories)

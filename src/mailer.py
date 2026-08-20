@@ -9,7 +9,7 @@ from src.agent import ScoredJob
 
 SITE_LABEL = {"wanted": "원티드", "saramin": "사람인", "rocketpunch": "로켓펀치",
               "work24": "청년일경험", "jumpit": "점핏", "catch": "캐치",
-              "jobkorea": "잡코리아"}
+              "jobkorea": "잡코리아", "zighang": "직행"}
 
 
 def render_html(scored: list[ScoredJob], failures: list[str]) -> str:

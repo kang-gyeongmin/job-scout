@@ -1,0 +1,1291 @@
+{
+ "timestamp": "2026-08-20T22:33:46.00222372",
+ "success": true,
+ "data": {
+  "content": [
+   {
+    "id": "a7afcccb-8e47-470d-805b-52acb01e75a7",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "3b975163-dfe5-4e40-94b7-18cc1b1d9cd4",
+     "name": "새흐름",
+     "image": "https://groupby-public-image.s3.ap-northeast-2.amazonaws.com/startups/1073/1739515783/스크린샷 2025-02-14 154907.png"
+    },
+    "title": "[FODI] android 개발자(경력 3년 이상 채용)",
+    "createdAt": "2026-08-10T15:26:44.517619",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 0,
+    "careerMax": 20,
+    "regions": [
+     "서울"
+    ],
+    "employeeTypes": [
+     "정규직"
+    ],
+    "educations": [
+     "무관"
+    ],
+    "depthOnes": [
+     "IT_개발"
+    ],
+    "depthTwos": [
+     "안드로이드"
+    ],
+    "depthThrees": [],
+    "views": 200,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "모바일",
+     "앱개발"
+    ],
+    "badges": []
+   },
+   {
+    "id": "caa1225e-23f1-45d3-b0c6-dad42a5e91a5",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "8a1e7708-de39-4b57-a740-daff0b39ef32",
+     "name": "엔세이피아(구 코코네)",
+     "image": "https://groupby-public-image.s3.ap-northeast-2.amazonaws.com/startups/828/1784682493/썸네일 박스.png"
+    },
+    "title": "[ENSAPIA Internship] AI Engineer",
+    "createdAt": "2026-04-03T21:00:39.888657",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 0,
+    "careerMax": 10,
+    "regions": [
+     "서울"
+    ],
+    "employeeTypes": [
+     "체험형인턴"
+    ],
+    "educations": [
+     "무관"
+    ],
+    "depthOnes": [
+     "AI_데이터"
+    ],
+    "depthTwos": [
+     "머신러닝엔지니어",
+     "LLM",
+     "생성형AI"
+    ],
+    "depthThrees": [],
+    "views": 481,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "AI어시스턴트",
+     "아바타메타버스",
+     "AI모델연구"
+    ],
+    "badges": []
+   },
+   {
+    "id": "ab64de23-60cb-40b5-931a-3186ba5fae0e",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "905ccf17-c87a-479a-833d-7fcb5fefd295",
+     "name": "님버스테크",
+     "image": "https://groupby-public-image.s3.ap-northeast-2.amazonaws.com/startups/2092/1778564169/스크린샷 2026-05-12 143101.png"
+    },
+    "title": "하나은행 비정형데이터 분석 파이프라인 구축 - 생성형 AI·RAG 전문인력 모집",
+    "createdAt": "2026-07-07T15:00:33.016023",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 0,
+    "careerMax": 20,
+    "regions": [
+     "서울"
+    ],
+    "employeeTypes": [
+     "계약직"
+    ],
+    "educations": [
+     "무관"
+    ],
+    "depthOnes": [
+     "AI_데이터"
+    ],
+    "depthTwos": [
+     "LLM",
+     "RAG"
+    ],
+    "depthThrees": [],
+    "views": 124,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "파이썬",
+     "인공지능",
+     "LLM"
+    ],
+    "badges": []
+   },
+   {
+    "id": "2a054601-3a6f-40b5-a370-c9c3d1641c2d",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "e5140a5d-a273-4895-84f4-0f3dbc00f6e2",
+     "name": "와이폴라리스",
+     "image": "https://groupby-public-image.s3.ap-northeast-2.amazonaws.com/startups/239/1694487120/0731_와이폴라_블로-03.jpeg"
+    },
+    "title": "컴퓨터비전 AI",
+    "createdAt": "2025-09-17T15:00:22",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 0,
+    "careerMax": 0,
+    "regions": [
+     "서울"
+    ],
+    "employeeTypes": [
+     "정규직"
+    ],
+    "educations": [
+     "학사"
+    ],
+    "depthOnes": [
+     "AI_데이터"
+    ],
+    "depthTwos": [
+     "컴퓨터비전"
+    ],
+    "depthThrees": [],
+    "views": 1517,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "객체탐지",
+     "컴퓨터비전"
+    ],
+    "badges": []
+   },
+   {
+    "id": "94338859-c1d1-440c-8bb1-dd9b04412aa6",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "d7c08049-b10e-486e-9ff3-1038ebf9cb66",
+     "name": "엘리스그룹",
+     "image": "https://static.wanted.co.kr/images/wdes/0_5.8fbbbed4.jpg"
+    },
+    "title": "프론트엔드 엔지니어",
+    "createdAt": "2026-01-27T15:00:17.997726",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 0,
+    "careerMax": 5,
+    "regions": [
+     "서울"
+    ],
+    "employeeTypes": [
+     "정규직"
+    ],
+    "educations": [
+     "무관"
+    ],
+    "depthOnes": [
+     "IT_개발"
+    ],
+    "depthTwos": [
+     "프론트엔드"
+    ],
+    "depthThrees": [],
+    "views": 586,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "LXP개발",
+     "에듀테크",
+     "클라우드"
+    ],
+    "badges": []
+   },
+   {
+    "id": "376613a4-2685-40b3-921d-89476b7b5105",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "fef1d6f2-c3a2-45d7-ad94-c3f0a3a9ea62",
+     "name": "(주)스마트솔루션",
+     "image": "https://groupby-public-image.s3.ap-northeast-2.amazonaws.com/startups/383/1787104129/이모지.png"
+    },
+    "title": "카카오인증 클라우드 인프라 및 사내 보안 솔루션 운영 실무자",
+    "createdAt": "2026-08-18T15:03:13.006734",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 0,
+    "careerMax": 20,
+    "regions": [
+     "경기"
+    ],
+    "employeeTypes": [
+     "정규직"
+    ],
+    "educations": [
+     "학사"
+    ],
+    "depthOnes": [
+     "IT_개발"
+    ],
+    "depthTwos": [
+     "정보보호_보안"
+    ],
+    "depthThrees": [],
+    "views": 10,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "B2B",
+     "보안",
+     "쿠버네티스"
+    ],
+    "badges": []
+   },
+   {
+    "id": "e8eabb37-6133-4024-ae63-75d0fc4ffba5",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "78e76795-113b-4562-8163-16f890dad86d",
+     "name": "에이빔플러스",
+     "image": "https://groupby-public-image.s3.ap-northeast-2.amazonaws.com/startups/2207/1782189124/대문.png"
+    },
+    "title": "건축 설계자동화 엔지니어(CAD/BIM)",
+    "createdAt": "2026-06-29T14:53:25.131485",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 0,
+    "careerMax": 20,
+    "regions": [
+     "서울"
+    ],
+    "employeeTypes": [
+     "정규직"
+    ],
+    "educations": [
+     "무관"
+    ],
+    "depthOnes": [
+     "IT_개발"
+    ],
+    "depthTwos": [
+     "소프트웨어엔지니어",
+     "응용프로그램"
+    ],
+    "depthThrees": [],
+    "views": 33,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "CAD개발",
+     "설계자동화",
+     "AI기술"
+    ],
+    "badges": []
+   },
+   {
+    "id": "beab68b9-7526-49a3-8f6f-4ddb4df4ce8b",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "d6addc66-ca4b-46f7-ba6e-c306ded810be",
+     "name": "유어케이스",
+     "image": "https://groupby-public-image.s3.ap-northeast-2.amazonaws.com/startups/1230/1747654899/yourkase 로고 정방형.png"
+    },
+    "title": "일본과 한국 시장을 함께 연결할 Software Engineer를 찾습니다. ",
+    "createdAt": "2026-08-12T17:13:21.200883",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 0,
+    "careerMax": 20,
+    "regions": [
+     "서울"
+    ],
+    "employeeTypes": [
+     "정규직"
+    ],
+    "educations": [
+     "무관"
+    ],
+    "depthOnes": [
+     "IT_개발"
+    ],
+    "depthTwos": [
+     "웹풀스택"
+    ],
+    "depthThrees": [],
+    "views": 386,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "소비데이터",
+     "이커머스",
+     "앱서비스"
+    ],
+    "badges": []
+   },
+   {
+    "id": "f89289a1-80d0-4df7-a2ce-97afdf225da3",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "3249c5b8-da4d-4762-85d0-5c07db2489e7",
+     "name": "인포시즈",
+     "image": "https://static.wanted.co.kr/images/wdes/0_5.0f6a9225.jpg"
+    },
+    "title": "Forward Deployed Engineer",
+    "createdAt": "2026-07-22T15:05:29.068968",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 1,
+    "careerMax": 5,
+    "regions": [
+     "서울"
+    ],
+    "employeeTypes": [
+     "정규직"
+    ],
+    "educations": [
+     "무관"
+    ],
+    "depthOnes": [
+     "AI_데이터"
+    ],
+    "depthTwos": [
+     "데이터엔지니어"
+    ],
+    "depthThrees": [],
+    "views": 41,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "데이터모델링",
+     "AI솔루션"
+    ],
+    "badges": []
+   },
+   {
+    "id": "b4b0fa37-c881-48c0-a4ab-c11a068c5bf8",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "9b5601da-a460-4226-87d0-202a6f7fca5c",
+     "name": "(주)콩콩프렌즈",
+     "image": "https://groupby-public-image.s3.ap-northeast-2.amazonaws.com/startups/2028/1778080495/CongKong_Logo_V2.png"
+    },
+    "title": "이벤트 엔지니어 (프론트엔드 개발 + 현장 기술운영)",
+    "createdAt": "2026-07-13T17:39:13.480715",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 0,
+    "careerMax": 3,
+    "regions": [
+     "경기"
+    ],
+    "employeeTypes": [
+     "정규직"
+    ],
+    "educations": [
+     "무관"
+    ],
+    "depthOnes": [
+     "IT_개발"
+    ],
+    "depthTwos": [
+     "프론트엔드"
+    ],
+    "depthThrees": [],
+    "views": 440,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "대시보드개발",
+     "이벤트테크"
+    ],
+    "badges": []
+   },
+   {
+    "id": "4f6361a7-84ca-47d0-9836-4db68934f9a3",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "897d39da-6176-4fb8-812a-006edcb30151",
+     "name": "비전스페이스",
+     "image": "https://static.wanted.co.kr/images/wdes/0_4.fa38da93.png"
+    },
+    "title": "[경력] 언리얼 엔진 개발자   (제조 AI 시뮬레이션 개발_정규직 및 계약직)",
+    "createdAt": "2026-07-03T20:27:09.038547",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 0,
+    "careerMax": 15,
+    "regions": [
+     "서울"
+    ],
+    "employeeTypes": [
+     "계약직",
+     "정규직"
+    ],
+    "educations": [
+     "무관"
+    ],
+    "depthOnes": [
+     "IT_개발"
+    ],
+    "depthTwos": [
+     "VR_AR_3D",
+     "소프트웨어엔지니어"
+    ],
+    "depthThrees": [],
+    "views": 23,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "C",
+     "디지털트윈",
+     "언리얼엔진"
+    ],
+    "badges": []
+   },
+   {
+    "id": "7a58bcb6-e7ad-44cd-9a50-f50a2e8f59f9",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "14efce00-1f29-4901-b6ce-d3267cb60b47",
+     "name": "티피씨인터넷",
+     "image": "https://groupby-public-image.s3.ap-northeast-2.amazonaws.com/startups/639/1719559445/티피씨인터넷.png"
+    },
+    "title": "QA 매니저 / QA Manager",
+    "createdAt": "2026-06-30T12:43:53.756261",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 0,
+    "careerMax": 20,
+    "regions": [
+     "서울"
+    ],
+    "employeeTypes": [
+     "정규직"
+    ],
+    "educations": [
+     "무관"
+    ],
+    "depthOnes": [
+     "IT_개발"
+    ],
+    "depthTwos": [
+     "QA_테스트"
+    ],
+    "depthThrees": [],
+    "views": 42,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "QA",
+     "LIKEY",
+     "테스트케이스"
+    ],
+    "badges": []
+   },
+   {
+    "id": "8a240e4b-4f3d-4f09-a5c3-86d0709ad80f",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "e509b522-ef94-44b9-82f0-82f05eb4028f",
+     "name": "벙커키즈",
+     "image": "https://static.wanted.co.kr/images/wdes/0_5.b91e3bee.png"
+    },
+    "title": "[위프(WHIF)] Tech- Backend Engineer",
+    "createdAt": "2026-07-01T17:31:57.421878",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 0,
+    "careerMax": 20,
+    "regions": [
+     "서울"
+    ],
+    "employeeTypes": [
+     "정규직"
+    ],
+    "educations": [
+     "무관"
+    ],
+    "depthOnes": [
+     "IT_개발"
+    ],
+    "depthTwos": [
+     "서버_백엔드",
+     "웹풀스택"
+    ],
+    "depthThrees": [],
+    "views": 315,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "백엔드",
+     "AI캐릭터",
+     "LLM"
+    ],
+    "badges": []
+   },
+   {
+    "id": "58c6fb70-7db4-4c0d-b72c-1c9ec5b11392",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "e728159a-44cb-4aac-b5f3-521f9a3e2479",
+     "name": "로지브라더스",
+     "image": "https://static.wanted.co.kr/images/wdes/0_5.78ec7a9d.jpg"
+    },
+    "title": "[코드모스] 백엔드 개발자",
+    "createdAt": "2026-08-19T21:02:05.367611",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 0,
+    "careerMax": 3,
+    "regions": [
+     "서울"
+    ],
+    "employeeTypes": [
+     "정규직"
+    ],
+    "educations": [
+     "무관"
+    ],
+    "depthOnes": [
+     "IT_개발"
+    ],
+    "depthTwos": [
+     "서버_백엔드"
+    ],
+    "depthThrees": [],
+    "views": 67,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "서버개발",
+     "에듀테크",
+     "NestJS"
+    ],
+    "badges": []
+   },
+   {
+    "id": "5b78046e-72f8-46c0-9d07-ad2aa82e253e",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "3249c5b8-da4d-4762-85d0-5c07db2489e7",
+     "name": "인포시즈",
+     "image": "https://static.wanted.co.kr/images/wdes/0_5.0f6a9225.jpg"
+    },
+    "title": "Applied Scientist (Agent)",
+    "createdAt": "2026-07-22T15:04:35.554634",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 0,
+    "careerMax": 20,
+    "regions": [
+     "서울"
+    ],
+    "employeeTypes": [
+     "정규직"
+    ],
+    "educations": [
+     "석사"
+    ],
+    "depthOnes": [
+     "AI_데이터"
+    ],
+    "depthTwos": [
+     "데이터사이언티스트"
+    ],
+    "depthThrees": [],
+    "views": 50,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "AI연구",
+     "성과급",
+     "에이전트개발"
+    ],
+    "badges": []
+   },
+   {
+    "id": "5d3ebe76-ad14-469e-845f-35e30c42e81f",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "5dff70a6-a645-4cc2-b93b-02baa5a34345",
+     "name": "어쎈드(ASCEND)",
+     "image": "https://groupby-public-image.s3.ap-northeast-2.amazonaws.com/startups/83/1727436444/ascend_logo_정사각형.jpg"
+    },
+    "title": "Quantitative Research Engineer",
+    "createdAt": "2025-09-10T18:00:21",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 0,
+    "careerMax": 10,
+    "regions": [
+     "서울"
+    ],
+    "employeeTypes": [
+     "정규직"
+    ],
+    "educations": [
+     "무관"
+    ],
+    "depthOnes": [
+     "AI_데이터"
+    ],
+    "depthTwos": [
+     "머신러닝엔지니어",
+     "데이터엔지니어"
+    ],
+    "depthThrees": [],
+    "views": 780,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "퀀트트레이딩",
+     "트레이딩개발",
+     "재택가능"
+    ],
+    "badges": []
+   },
+   {
+    "id": "e95e6974-f639-463c-94b5-c39509f03eed",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "5861b452-192c-49da-94db-92cb9fb25d7c",
+     "name": "래빗홀컴퍼니",
+     "image": "https://groupby-public-image.s3.ap-northeast-2.amazonaws.com/startups/1932/1776221744/스크린샷 2026-04-15 115437.png"
+    },
+    "title": "DevOps / 인프라 엔지니어",
+    "createdAt": "2026-04-15T15:01:25.6482",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 0,
+    "careerMax": 10,
+    "regions": [
+     "서울"
+    ],
+    "employeeTypes": [
+     "계약직",
+     "정규직"
+    ],
+    "educations": [
+     "무관"
+    ],
+    "depthOnes": [
+     "IT_개발"
+    ],
+    "depthTwos": [
+     "DevOps_SRE",
+     "정보보호_보안",
+     "서버_백엔드"
+    ],
+    "depthThrees": [],
+    "views": 317,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "자율출퇴근제",
+     "글로벌인프라",
+     "서버보안"
+    ],
+    "badges": []
+   },
+   {
+    "id": "b0f0cd20-1973-476e-9f8d-f68693cb91c8",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "76a5ca9b-85ad-4ff1-acd7-2cd7c1977b63",
+     "name": "페이스웹",
+     "image": "https://groupby-public-image.s3.ap-northeast-2.amazonaws.com/startups/1621/1763080549/스크린샷 2025-11-14 093520.png"
+    },
+    "title": "﻿SLM Modeling & Data ﻿﻿Engineering",
+    "createdAt": "2026-07-28T23:42:20.081285",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 0,
+    "careerMax": 20,
+    "regions": [
+     "서울"
+    ],
+    "employeeTypes": [
+     "정규직"
+    ],
+    "educations": [
+     "무관"
+    ],
+    "depthOnes": [
+     "AI_데이터"
+    ],
+    "depthTwos": [
+     "머신러닝엔지니어",
+     "RAG",
+     "MLOps",
+     "데이터엔지니어"
+    ],
+    "depthThrees": [],
+    "views": 65,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "데이터자산화",
+     "파인튜닝",
+     "의료AI"
+    ],
+    "badges": []
+   },
+   {
+    "id": "4046aa8c-12ce-4c76-970c-539b280f0789",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "4dbb65e1-9287-4a04-8c67-6eb8f38cd4cb",
+     "name": "메타파머스",
+     "image": "https://static.wanted.co.kr/images/wdes/0_4.327ce6e4.png"
+    },
+    "title": "Robotics Software Engineer",
+    "createdAt": "2025-10-17T21:06:05.851369",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 0,
+    "careerMax": 10,
+    "regions": [
+     "서울"
+    ],
+    "employeeTypes": [
+     "정규직"
+    ],
+    "educations": [
+     "석사"
+    ],
+    "depthOnes": [
+     "IT_개발"
+    ],
+    "depthTwos": [
+     "로봇SW"
+    ],
+    "depthThrees": [],
+    "views": 104,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "로봇",
+     "로봇백엔드개발"
+    ],
+    "badges": []
+   },
+   {
+    "id": "60fa5736-e82d-4463-b69e-9d3878986b32",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "022ea781-b4a4-414d-8e75-e7fef0a9dc45",
+     "name": "(주)에이블네트워크",
+     "image": "https://groupby-public-image.s3.ap-northeast-2.amazonaws.com/startups/1673/1765161237/unnamed (7).jpg"
+    },
+    "title": "네트워크 인프라 유지보수",
+    "createdAt": "2026-01-15T09:33:39.714474",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 0,
+    "careerMax": 10,
+    "regions": [
+     "경기"
+    ],
+    "employeeTypes": [
+     "정규직"
+    ],
+    "educations": [
+     "무관"
+    ],
+    "depthOnes": [
+     "IT_개발"
+    ],
+    "depthTwos": [
+     "시스템_네트워크"
+    ],
+    "depthThrees": [],
+    "views": 49,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "네트워크",
+     "출퇴근가능",
+     "스위치설정"
+    ],
+    "badges": []
+   },
+   {
+    "id": "cdba5e8d-25bb-463b-9f5a-42a1c9235bc6",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "ecde1737-ab0d-41d2-a3a5-309596add8cd",
+     "name": "텐",
+     "image": "https://groupby-public-image.s3.ap-northeast-2.amazonaws.com/startups/1225/1747369772/스크린샷 2025-05-16 132923.png"
+    },
+    "title": "AI 인프라 연구원(SW+HW)",
+    "createdAt": "2025-06-24T16:08:01",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 0,
+    "careerMax": 10,
+    "regions": [
+     "서울"
+    ],
+    "employeeTypes": [
+     "정규직"
+    ],
+    "educations": [
+     "무관"
+    ],
+    "depthOnes": [
+     "AI_데이터"
+    ],
+    "depthTwos": [
+     "MLOps"
+    ],
+    "depthThrees": [],
+    "views": 324,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "ML서비스",
+     "AI인프라"
+    ],
+    "badges": []
+   },
+   {
+    "id": "8cf9bb42-e54a-4271-a5ef-289503530038",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "cc57afbe-f2b2-47f0-83ed-cc33c3ffcbda",
+     "name": "미리비트",
+     "image": "https://static.wanted.co.kr/images/wdes/0_4.e9c9d889.png"
+    },
+    "title": "빅데이터 엔지니어,서버 백엔드 엔지니어 (인메모리 기반)",
+    "createdAt": "2025-07-17T22:03:53",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 0,
+    "careerMax": 10,
+    "regions": [
+     "경기"
+    ],
+    "employeeTypes": [
+     "정규직"
+    ],
+    "educations": [
+     "무관"
+    ],
+    "depthOnes": [
+     "AI_데이터"
+    ],
+    "depthTwos": [
+     "데이터엔지니어"
+    ],
+    "depthThrees": [],
+    "views": 645,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "파이프라인",
+     "실시간데이터",
+     "빅데이터"
+    ],
+    "badges": []
+   },
+   {
+    "id": "848d3912-ffb0-48dd-8c1e-458e81136f63",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "d7c08049-b10e-486e-9ff3-1038ebf9cb66",
+     "name": "엘리스그룹",
+     "image": "https://static.wanted.co.kr/images/wdes/0_5.8fbbbed4.jpg"
+    },
+    "title": "Cloud Technical Program Manager",
+    "createdAt": "2026-02-25T21:01:09.669315",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 0,
+    "careerMax": 10,
+    "regions": [
+     "서울"
+    ],
+    "employeeTypes": [
+     "정규직"
+    ],
+    "educations": [
+     "무관"
+    ],
+    "depthOnes": [
+     "IT_개발",
+     "기획_전략_경영"
+    ],
+    "depthTwos": [
+     "개발PM",
+     "기술기획"
+    ],
+    "depthThrees": [],
+    "views": 23,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "기술제안서",
+     "프로젝트관리",
+     "AI클라우드"
+    ],
+    "badges": []
+   },
+   {
+    "id": "378b5374-05a3-4f3a-9730-e4c9c73d44c4",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "d7c08049-b10e-486e-9ff3-1038ebf9cb66",
+     "name": "엘리스그룹",
+     "image": "https://static.wanted.co.kr/images/wdes/0_5.8fbbbed4.jpg"
+    },
+    "title": "클라우드 서포트 엔지니어",
+    "createdAt": "2026-02-09T15:00:27.739275",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 0,
+    "careerMax": 10,
+    "regions": [
+     "서울"
+    ],
+    "employeeTypes": [
+     "정규직"
+    ],
+    "educations": [
+     "무관"
+    ],
+    "depthOnes": [
+     "IT_개발"
+    ],
+    "depthTwos": [
+     "기타IT_개발"
+    ],
+    "depthThrees": [],
+    "views": 49,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "GPU트러블슈팅",
+     "AI클라우드",
+     "Python"
+    ],
+    "badges": []
+   },
+   {
+    "id": "956f096f-fec9-44b6-9e91-b35753f1c7e8",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "e5362e3a-6fb4-4042-8414-cc8eb6d16386",
+     "name": "누리미디어",
+     "image": "https://static.wanted.co.kr/images/wdes/0_5.a73d9c0a.jpg"
+    },
+    "title": "[AI사업] 주니어 AI 개발자 (병역특례 전문연구요원)",
+    "createdAt": "2026-07-30T13:38:36.072901",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 0,
+    "careerMax": 20,
+    "regions": [
+     "서울"
+    ],
+    "employeeTypes": [
+     "병역특례",
+     "정규직"
+    ],
+    "educations": [
+     "석사"
+    ],
+    "depthOnes": [
+     "AI_데이터"
+    ],
+    "depthTwos": [
+     "머신러닝엔지니어"
+    ],
+    "depthThrees": [],
+    "views": 41,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "재택근무",
+     "AI서비스",
+     "LLM연구개발"
+    ],
+    "badges": []
+   },
+   {
+    "id": "ba9a4f3e-864e-4173-9a55-d42664fcf02a",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "068bbae6-541e-41fb-99e4-7fc89785608b",
+     "name": "vox.ai",
+     "image": "https://static.wanted.co.kr/images/wdes/0_4.0a911d30.png"
+    },
+    "title": "Voice Agent Infrastructure Engineer",
+    "createdAt": "2026-04-16T14:25:02.674425",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 1,
+    "careerMax": 9,
+    "regions": [
+     "서울"
+    ],
+    "employeeTypes": [
+     "정규직"
+    ],
+    "educations": [
+     "무관"
+    ],
+    "depthOnes": [
+     "IT_개발"
+    ],
+    "depthTwos": [
+     "DevOps_SRE",
+     "소프트웨어엔지니어",
+     "시스템_네트워크"
+    ],
+    "depthThrees": [],
+    "views": 80,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "음성AI",
+     "실시간미디어",
+     "인프라엔지니어"
+    ],
+    "badges": []
+   },
+   {
+    "id": "6ebab3f3-817a-4353-8f04-ecdaa9bc91a6",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "4d5e743e-a7eb-4571-843f-151ccb845020",
+     "name": "제너러티브랩",
+     "image": "https://groupby-public-image.s3.ap-northeast-2.amazonaws.com/startups/2140/1779778731/제너러티브랩 새로고.jpg"
+    },
+    "title": "졸업 & 스펙 필요 없습니다. - 백엔드 엔지니어 (신입 지원 가능)",
+    "createdAt": "2026-06-02T15:00:39.349575",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 0,
+    "careerMax": 20,
+    "regions": [
+     "서울"
+    ],
+    "employeeTypes": [
+     "계약직"
+    ],
+    "educations": [
+     "무관"
+    ],
+    "depthOnes": [
+     "IT_개발"
+    ],
+    "depthTwos": [
+     "서버_백엔드"
+    ],
+    "depthThrees": [],
+    "views": 1413,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "AI에이전트",
+     "백엔드개발",
+     "학점연계"
+    ],
+    "badges": []
+   },
+   {
+    "id": "10b628e7-62f3-4ffb-896d-ca6a4e5380e0",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "508e7061-45b3-4e6c-b362-154fb8166a45",
+     "name": "에이에스엑스컴퍼니",
+     "image": "https://static.wanted.co.kr/images/wdes/0_4.e6076e96.png"
+    },
+    "title": "풀스택 개발",
+    "createdAt": "2026-08-11T21:04:31.222811",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 1,
+    "careerMax": 5,
+    "regions": [
+     "서울"
+    ],
+    "employeeTypes": [
+     "정규직"
+    ],
+    "educations": [
+     "무관"
+    ],
+    "depthOnes": [
+     "IT_개발"
+    ],
+    "depthTwos": [
+     "웹풀스택"
+    ],
+    "depthThrees": [],
+    "views": 49,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "RAG",
+     "에듀테크",
+     "WebRTC"
+    ],
+    "badges": []
+   },
+   {
+    "id": "9b249f63-f2f6-4bea-82b6-0909a1871888",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "41ee8fb3-742d-45c9-a3d2-1e8d2301e1e1",
+     "name": "폴라펄스",
+     "image": "https://groupby-public-image.s3.ap-northeast-2.amazonaws.com/startups/1816/1770943031/스크린샷 2026-02-13 093535.png"
+    },
+    "title": "AI Engineer On-premise Graph RAG 엔진 개발자 (Neo4j 기반)",
+    "createdAt": "2026-02-21T09:00:19.668099",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 0,
+    "careerMax": 10,
+    "regions": [
+     "서울"
+    ],
+    "employeeTypes": [
+     "계약직"
+    ],
+    "educations": [
+     "무관"
+    ],
+    "depthOnes": [
+     "AI_데이터"
+    ],
+    "depthTwos": [
+     "머신러닝엔지니어",
+     "LLM",
+     "RAG"
+    ],
+    "depthThrees": [],
+    "views": 183,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "RAG구축",
+     "프로젝트보상",
+     "금융AI"
+    ],
+    "badges": []
+   },
+   {
+    "id": "03c45b44-43a8-48ed-b506-803fd34337f7",
+    "affiliate": "그룹바이",
+    "company": {
+     "id": "63523560-a95f-4f1e-9330-4b510c757817",
+     "name": "휴몬랩",
+     "image": "https://groupby-public-image.s3.ap-northeast-2.amazonaws.com/startups/1684/1765506436/1642470319477.jpg"
+    },
+    "title": "[신입/경력] 백엔드 개발자 (교육용 AI SaaS)",
+    "createdAt": "2026-07-22T15:07:14.342528",
+    "endDate": null,
+    "deadlineType": "상시채용",
+    "careerMin": 1,
+    "careerMax": 20,
+    "regions": [
+     "서울"
+    ],
+    "employeeTypes": [
+     "정규직"
+    ],
+    "educations": [
+     "무관"
+    ],
+    "depthOnes": [
+     "IT_개발"
+    ],
+    "depthTwos": [
+     "서버_백엔드"
+    ],
+    "depthThrees": [],
+    "views": 335,
+    "highlightedTitle": null,
+    "highlightedCompanyName": null,
+    "bookmarked": false,
+    "tags": [],
+    "keywords": [
+     "재택근무",
+     "API설계",
+     "소프트웨어"
+    ],
+    "badges": []
+   }
+  ],
+  "page": 0,
+  "size": 30,
+  "totalElements": 1537,
+  "totalPages": 52,
+  "last": false,
+  "didYouMean": null
+ },
+ "code": "SUCCESS",
+ "message": null
+}
