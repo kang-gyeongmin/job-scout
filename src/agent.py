@@ -3,10 +3,13 @@
 수집기를 커스텀 툴로 노출하고, 에이전트가 키워드를 바꿔가며 검색한 뒤
 profile.md 대비 적합도를 JSON으로 출력한다.
 """
+import asyncio
 import json
 import re
 from dataclasses import asdict, dataclass
 from typing import Callable
+
+AGENT_TIMEOUT_SEC = 600  # 에이전트 실행 상한(10분) — 인증/한도 문제로 매달리는 것 방지
 
 from claude_agent_sdk import (
     ClaudeAgentOptions,
@@ -199,9 +202,17 @@ async def run_agent(
     )
 
     result_text = ""
-    async for message in query(prompt=mission, options=options):
-        if isinstance(message, ResultMessage):
-            result_text = message.result or ""
+    try:
+        async with asyncio.timeout(AGENT_TIMEOUT_SEC):
+            async for message in query(prompt=mission, options=options):
+                if isinstance(message, ResultMessage):
+                    result_text = message.result or ""
+    except TimeoutError as e:
+        raise RuntimeError(
+            f"에이전트 실행이 {AGENT_TIMEOUT_SEC}초를 초과해 중단했습니다 "
+            f"— LLM 인증 토큰 만료/한도 문제일 수 있습니다 "
+            f"(claude setup-token으로 토큰 갱신 후 .env의 "
+            f"CLAUDE_CODE_OAUTH_TOKEN 교체)") from e
 
     scored = parse_scored(result_text)
     return scored, fetched_ids, failures, postings_by_id
