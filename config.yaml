@@ -33,13 +33,13 @@ people:
       jobkorea: true
       zighang: true
 
-  # 화장품학과 신입 — 비IT, 키워드 기반 소스 위주
+  # 피부관리사(에스테틱) 신입 — 비IT, 키워드 기반 소스 위주
   - id: cosmetic
     profile: people/cosmetic/profile.md
     notion_db_env: NOTION_DB_COSMETIC
     experience: "신입"
-    job_keywords: ["화장품", "화장품 연구원", "화장품 품질관리", "화장품 생산관리",
-                   "화장품 개발", "화장품 마케팅"]
+    job_keywords: ["피부관리사", "에스테틱", "피부미용", "스킨케어",
+                   "피부관리", "에스테티션"]
     sites:
       wanted: true
       jobkorea: true
