@@ -1,31 +1,56 @@
-job_keywords:
-  - "데이터 엔지니어"
-  - "Data Engineer"
-  - "데이터 인턴"
-  - "개발 인턴"
-experience: "신입~주니어(3년 이하)"
-# 지원 가능한 "최소 요구 경력" 상한(년). 원티드·점핏 수집기에서 이 값을 넘는
-# 공고(예: 최소 3년 요구하는 "3~10년")를 제외한다. 0=신입만, 1=1년 이하 허용.
-max_experience_from: 1
-# 점핏 직무 카테고리 ID(콤마 구분). keyword가 안 먹혀서 카테고리로 필터한다.
-# 19=빅데이터 / 넓히려면 8=AI/ML, 1=백엔드, 9=devops, 7=DBA 추가.
-jumpit_categories: "19"
-locations: ["서울", "경기", "인천"]
-sites:
-  wanted: true
-  saramin: false      # .env에 SARAMIN_API_KEY 설정 후 true
-  rocketpunch: false  # 클라이언트 렌더링 + AWS WAF로 보류
-  work24: true        # 청년일경험 포털 (IT 직무·수도권/지역무관 고정 필터)
-  jumpit: true        # 점핏 (개발자 특화, minCareer 기준 경력 필터)
-  catch: true         # 캐치 (중견·대기업·공기업 신입 공채, 기업규모 제공)
-  jobkorea: true      # 잡코리아 (폭넓은 커버리지, 기업구분=기업규모 제공)
-  zighang: true       # 직행 (신입 특화, 수도권·IT/AI데이터 API 필터)
+# 다인용 설정 — 사람마다 프로필·검색조건·Notion DB를 따로 둔다.
+# 매일 실행 시 각 사람별로 수집 → 채점 → 그 사람 Notion DB에 저장한다.
+
+# 사람별로 생략하면 쓰이는 공통 기본값
+defaults:
+  locations: ["서울", "경기", "인천"]
+  max_experience_from: 1   # 최소 요구 경력 상한(년). 0=신입만, 1=1년 이하 허용
+  min_score: 6             # 이메일 포함 기준
+  notion_min_score: 5      # Notion 저장 기준(대시보드는 전부 기록)
+  top_n: 10                # 이메일 최대 공고 수
+
 email:
-  enabled: false   # true로 바꾸면 메일 발송 재개 (SMTP_PASSWORD 필요)
+  enabled: false   # true로 바꾸면 메일 발송 (SMTP_PASSWORD 필요)
   to: rkdrudals991@naver.com
   from: rkdrudals991@naver.com
   smtp_host: smtp.naver.com
   smtp_port: 465
-min_score: 6         # 이 점수 이상만 이메일에 포함
-notion_min_score: 5  # 이 점수 이상만 Notion에 저장 (대시보드는 전부 기록)
-top_n: 10            # 이메일에 담을 최대 공고 수
+
+people:
+  # 본인 — 데이터 엔지니어 (IT 소스 전부)
+  - id: gyeongmin
+    profile: people/gyeongmin/profile.md
+    notion_db_env: NOTION_DB_ID
+    experience: "신입~주니어(3년 이하)"
+    job_keywords: ["데이터 엔지니어", "Data Engineer", "데이터 인턴", "개발 인턴"]
+    jumpit_categories: "19"   # 빅데이터
+    sites:
+      wanted: true
+      saramin: false
+      work24: true
+      jumpit: true
+      catch: true
+      jobkorea: true
+      zighang: true
+
+  # 화장품학과 신입 — 비IT, 키워드 기반 소스 위주
+  - id: cosmetic
+    profile: people/cosmetic/profile.md
+    notion_db_env: NOTION_DB_COSMETIC
+    experience: "신입"
+    job_keywords: ["화장품", "화장품 연구원", "화장품 품질관리", "화장품 생산관리",
+                   "화장품 개발", "화장품 마케팅"]
+    sites:
+      wanted: true
+      jobkorea: true
+
+  # 기계공학 R&D 신입 (대학원 재학) — 비IT, 키워드 기반 소스 위주
+  - id: mech
+    profile: people/mech/profile.md
+    notion_db_env: NOTION_DB_MECH
+    experience: "신입"
+    job_keywords: ["기계 연구개발", "기계설계", "의료기기 연구개발", "의료기기",
+                   "로봇 엔지니어", "기구설계", "연구개발 엔지니어"]
+    sites:
+      wanted: true
+      jobkorea: true
