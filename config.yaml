@@ -21,6 +21,7 @@ people:
   - id: gyeongmin
     profile: people/gyeongmin/profile.md
     notion_db_env: NOTION_DB_ID
+    notion_min_score: 7   # 7점 이상만 노션에 표시
     experience: "신입~주니어(3년 이하)"
     job_keywords: ["데이터 엔지니어", "Data Engineer", "데이터 인턴", "개발 인턴"]
     jumpit_categories: "19"   # 빅데이터
