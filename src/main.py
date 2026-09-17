@@ -60,6 +60,13 @@ def build_collectors(pcfg: dict, log: logging.Logger) -> dict:
         if site == "jumpit":
             func = functools.partial(
                 func, categories=pcfg.get("jumpit_categories", jumpit.DEFAULT_CATEGORIES))
+        # 사람별 직무 카테고리 코드 (비IT 직군 대응)
+        if site == "zighang" and pcfg.get("zighang_categories"):
+            func = functools.partial(func, categories=pcfg["zighang_categories"])
+        if site == "catch" and pcfg.get("catch_jobcode"):
+            func = functools.partial(func, params={"JobCode": pcfg["catch_jobcode"]})
+        if site == "work24" and pcfg.get("work24_dty"):
+            func = functools.partial(func, dty=pcfg["work24_dty"])
         collectors[site] = func
     return collectors
 

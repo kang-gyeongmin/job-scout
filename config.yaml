@@ -52,6 +52,12 @@ people:
     experience: "신입"
     job_keywords: ["기계 연구개발", "기계설계", "의료기기 연구개발", "의료기기",
                    "로봇 엔지니어", "기구설계", "연구개발 엔지니어"]
+    catch_jobcode: "0501,0504,0505"          # 자동차·조선·기계 / 전기·전자·제어 / 기계설계
+    zighang_categories: "엔지니어링_연구_RND,생산_기능"
+    work24_dty: "15"                          # 연구(일경험)
     sites:
       wanted: true
       jobkorea: true
+      catch: true       # 연구개발/설계 직무
+      zighang: true      # 엔지니어링·R&D
+      work24: true       # 연구 일경험

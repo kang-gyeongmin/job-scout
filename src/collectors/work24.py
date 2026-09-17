@@ -92,12 +92,14 @@ def fetch_detail(program_id: str, client: httpx.Client) -> str:
         return ""
 
 
-def search(keyword: str, limit: int = 20) -> list[JobPosting]:
-    """모집 중인 IT 직무 일경험 프로그램을 수집한다 (keyword는 무시 — 모듈
-    독스트링 참고). 요청 사이에 0.5초 지연을 둔다."""
+def search(keyword: str, limit: int = 20, dty: str = DTY_CD) -> list[JobPosting]:
+    """모집 중인 일경험 프로그램을 수집한다 (keyword는 무시 — 모듈 독스트링 참고).
+
+    dty(직무코드, 콤마 구분): 14=IT(기본), 15=연구, 16=생산, 12=영업 등.
+    요청 사이에 0.5초 지연을 둔다."""
     data = {
         "areaCd": AREA_CD,
-        "dtyCd": DTY_CD,
+        "dtyCd": dty,
         "sortOption": "A",
         "recordCountPerPage": limit,
         "currentPageNo": 1,
